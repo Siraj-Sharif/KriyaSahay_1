@@ -1,0 +1,2 @@
+# NeuroGrip
+Multimodal Robotic Hand

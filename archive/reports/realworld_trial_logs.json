@@ -1,0 +1,130 @@
+[
+  {
+    "timestamp": "2026-09-14T12:25:30.427714",
+    "expected_gesture": "INDEX_FINGER",
+    "duration_s": 5.0,
+    "agreement_pct": 44.12,
+    "arch_a": {
+      "architecture": "A_FULL_FRAME",
+      "expected_gesture": "INDEX_FINGER",
+      "total_observed_frames": 34,
+      "matching_frames": 0,
+      "wrong_command_frames": 18,
+      "no_command_frames": 16,
+      "manual_recognition_consistency_pct": 0.0,
+      "switch_count": 8,
+      "mean_latency_ms": 36.68,
+      "median_latency_ms": 36.82,
+      "p95_latency_ms": 40.65
+    },
+    "arch_b": {
+      "architecture": "B_HAND_CROP",
+      "expected_gesture": "INDEX_FINGER",
+      "total_observed_frames": 34,
+      "matching_frames": 4,
+      "wrong_command_frames": 18,
+      "no_command_frames": 12,
+      "manual_recognition_consistency_pct": 11.76,
+      "switch_count": 13,
+      "mean_latency_ms": 98.56,
+      "median_latency_ms": 98.28,
+      "p95_latency_ms": 106.79
+    }
+  },
+  {
+    "timestamp": "2026-09-14T12:25:41.984268",
+    "expected_gesture": "TWO_FINGERS",
+    "duration_s": 5.0,
+    "agreement_pct": 34.29,
+    "arch_a": {
+      "architecture": "A_FULL_FRAME",
+      "expected_gesture": "TWO_FINGERS",
+      "total_observed_frames": 35,
+      "matching_frames": 4,
+      "wrong_command_frames": 1,
+      "no_command_frames": 30,
+      "manual_recognition_consistency_pct": 11.43,
+      "switch_count": 6,
+      "mean_latency_ms": 36.28,
+      "median_latency_ms": 36.2,
+      "p95_latency_ms": 39.78
+    },
+    "arch_b": {
+      "architecture": "B_HAND_CROP",
+      "expected_gesture": "TWO_FINGERS",
+      "total_observed_frames": 35,
+      "matching_frames": 16,
+      "wrong_command_frames": 4,
+      "no_command_frames": 15,
+      "manual_recognition_consistency_pct": 45.71,
+      "switch_count": 7,
+      "mean_latency_ms": 95.06,
+      "median_latency_ms": 98.75,
+      "p95_latency_ms": 106.1
+    }
+  },
+  {
+    "timestamp": "2026-09-14T12:25:53.812676",
+    "expected_gesture": "PINKY",
+    "duration_s": 5.0,
+    "agreement_pct": 16.67,
+    "arch_a": {
+      "architecture": "A_FULL_FRAME",
+      "expected_gesture": "PINKY",
+      "total_observed_frames": 36,
+      "matching_frames": 28,
+      "wrong_command_frames": 8,
+      "no_command_frames": 0,
+      "manual_recognition_consistency_pct": 77.78,
+      "switch_count": 3,
+      "mean_latency_ms": 35.33,
+      "median_latency_ms": 35.22,
+      "p95_latency_ms": 37.98
+    },
+    "arch_b": {
+      "architecture": "B_HAND_CROP",
+      "expected_gesture": "PINKY",
+      "total_observed_frames": 36,
+      "matching_frames": 6,
+      "wrong_command_frames": 30,
+      "no_command_frames": 0,
+      "manual_recognition_consistency_pct": 16.67,
+      "switch_count": 21,
+      "mean_latency_ms": 95.77,
+      "median_latency_ms": 94.92,
+      "p95_latency_ms": 104.35
+    }
+  },
+  {
+    "timestamp": "2026-09-14T12:26:10.705151",
+    "expected_gesture": "PINKY",
+    "duration_s": 5.0,
+    "agreement_pct": 0.0,
+    "arch_a": {
+      "architecture": "A_FULL_FRAME",
+      "expected_gesture": "PINKY",
+      "total_observed_frames": 29,
+      "matching_frames": 29,
+      "wrong_command_frames": 0,
+      "no_command_frames": 0,
+      "manual_recognition_consistency_pct": 100.0,
+      "switch_count": 0,
+      "mean_latency_ms": 43.45,
+      "median_latency_ms": 43.2,
+      "p95_latency_ms": 47.21
+    },
+    "arch_b": {
+      "architecture": "B_HAND_CROP",
+      "expected_gesture": "PINKY",
+      "total_observed_frames": 29,
+      "matching_frames": 0,
+      "wrong_command_frames": 26,
+      "no_command_frames": 3,
+      "manual_recognition_consistency_pct": 0.0,
+      "switch_count": 17,
+      "mean_latency_ms": 121.98,
+      "median_latency_ms": 121.54,
+      "p95_latency_ms": 130.16
+    }
+  }
+]

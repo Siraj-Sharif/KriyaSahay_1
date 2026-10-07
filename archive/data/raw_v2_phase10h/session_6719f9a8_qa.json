@@ -1,0 +1,20 @@
+{
+  "file_name": "dataset_v2_middle_6719f9a8.csv",
+  "label": "MIDDLE",
+  "session_id": "6719f9a8",
+  "sample_count": 200,
+  "handedness_counts": {
+    "RIGHT": 107,
+    "LEFT": 93
+  },
+  "is_feature_finite": true,
+  "non_finite_count": 0,
+  "duplicate_count": 0,
+  "expected_dim": 68,
+  "malformed_row_count": 0,
+  "sample_id_start": 1,
+  "sample_id_end": 200,
+  "is_sample_id_sequential": true,
+  "qa_passed": true,
+  "warnings": []
+}

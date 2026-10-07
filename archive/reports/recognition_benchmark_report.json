@@ -1,0 +1,4636 @@
+{
+  "benchmark_results": {
+    "1. Random Forest (Full 68-D)": {
+      "val_metrics": {
+        "accuracy": 0.4,
+        "macro_precision": 0.37985536525774316,
+        "macro_recall": 0.4,
+        "macro_f1": 0.3449725525959624,
+        "weighted_f1": 0.34497255259596243,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.11538461538461539,
+            "recall": 0.06,
+            "f1": 0.07894736842105263,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.9024390243902439,
+            "recall": 0.37,
+            "f1": 0.524822695035461,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.9736842105263158,
+            "recall": 0.37,
+            "f1": 0.5362318840579711,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.037037037037037035,
+            "recall": 0.01,
+            "f1": 0.015748031496062992,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 0.35064935064935066,
+            "recall": 0.54,
+            "f1": 0.4251968503937008,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.46774193548387094,
+            "recall": 0.87,
+            "f1": 0.6083916083916084,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.2403846153846154,
+            "recall": 1.0,
+            "f1": 0.3875968992248062,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.021739130434782608,
+            "recall": 0.01,
+            "f1": 0.0136986301369863,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.8290598290598291,
+            "recall": 0.97,
+            "f1": 0.8940092165898618,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 6,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 24,
+            "INDEX_PINKY": 8,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 62,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 37,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 2,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 41,
+            "THREE_FINGER": 20,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 46,
+            "FOUR_FINGERS": 0,
+            "GRAB": 37,
+            "INDEX": 1,
+            "INDEX_PINKY": 13,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 1,
+            "RING": 2,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 92,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 7,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 54,
+            "REST": 0,
+            "RING": 46,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 1,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 8,
+            "PINKY": 0,
+            "REST": 87,
+            "RING": 0,
+            "STOP": 4,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 1,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 98,
+            "RING": 0,
+            "STOP": 1,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 2,
+            "GRAB": 1,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 97,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 100,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 8,
+        "num_classes_f1_below_020": 6
+      },
+      "test_metrics": {
+        "accuracy": 0.4723076923076923,
+        "macro_precision": 0.41262529156472066,
+        "macro_recall": 0.4723076923076922,
+        "macro_f1": 0.4242446223722846,
+        "weighted_f1": 0.4242446223722846,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.5597014925373134,
+            "recall": 0.75,
+            "f1": 0.6410256410256411,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.591715976331361,
+            "recall": 1.0,
+            "f1": 0.7434944237918215,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 0.9900990099009901,
+            "recall": 1.0,
+            "f1": 0.9950248756218906,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.9347826086956522,
+            "recall": 0.86,
+            "f1": 0.8958333333333334,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.2581699346405229,
+            "recall": 0.79,
+            "f1": 0.3891625615763547,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.10687022900763359,
+            "recall": 0.14,
+            "f1": 0.12121212121212122,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.0136986301369863,
+            "recall": 0.01,
+            "f1": 0.011560693641618497,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 0.9090909090909091,
+            "recall": 0.6,
+            "f1": 0.7228915662650602,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 75,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 1,
+            "REST": 0,
+            "RING": 24,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 100,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 1,
+            "FOUR_FINGERS": 0,
+            "GRAB": 99,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 100,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 1,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 6,
+            "PINKY": 0,
+            "REST": 86,
+            "RING": 0,
+            "STOP": 8,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 21,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 79,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 17,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 6,
+            "RING": 0,
+            "STOP": 14,
+            "THREE_FINGER": 63,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 1,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 9,
+            "THREE_FINGER": 1,
+            "THUMB_ONLY": 6,
+            "TWO_FINGER": 83
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 37,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 3,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 60,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 21,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 66,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 4,
+            "STOP": 0,
+            "THREE_FINGER": 9,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 7,
+        "num_classes_f1_below_020": 6
+      },
+      "inference_latency_ms_per_sample": 0.041313384614813216
+    },
+    "2. 1-NN (Full 68-D)": {
+      "val_metrics": {
+        "accuracy": 0.5207692307692308,
+        "macro_precision": 0.5197054559600036,
+        "macro_recall": 0.5207692307692308,
+        "macro_f1": 0.48319229974937244,
+        "weighted_f1": 0.48319229974937244,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.9636363636363636,
+            "recall": 0.53,
+            "f1": 0.6838709677419355,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.975,
+            "recall": 0.39,
+            "f1": 0.5571428571428572,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.3076923076923077,
+            "recall": 0.08,
+            "f1": 0.12698412698412698,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.8073394495412844,
+            "recall": 0.88,
+            "f1": 0.8421052631578947,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.00425531914893617,
+            "recall": 0.01,
+            "f1": 0.005970149253731343,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 0.8849557522123894,
+            "recall": 1.0,
+            "f1": 0.9389671361502347,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.47619047619047616,
+            "recall": 0.9,
+            "f1": 0.6228373702422145,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.35587188612099646,
+            "recall": 1.0,
+            "f1": 0.5249343832020997,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.020833333333333332,
+            "recall": 0.01,
+            "f1": 0.013513513513513514,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.9603960396039604,
+            "recall": 0.97,
+            "f1": 0.9651741293532339,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 18,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 82,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 53,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 42,
+            "THREE_FINGER": 4,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 1
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 39,
+            "INDEX": 0,
+            "INDEX_PINKY": 21,
+            "MIDDLE": 38,
+            "PINKY": 1,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 1
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 8,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 92,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 88,
+            "MIDDLE": 0,
+            "PINKY": 12,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 1,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 4,
+            "PINKY": 0,
+            "REST": 90,
+            "RING": 0,
+            "STOP": 5,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 1
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 99,
+            "RING": 0,
+            "STOP": 1,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 2,
+            "GRAB": 1,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 97,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 100,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 100,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 5,
+        "num_classes_f1_below_020": 5
+      },
+      "test_metrics": {
+        "accuracy": 0.5146153846153846,
+        "macro_precision": 0.5040320588393292,
+        "macro_recall": 0.5146153846153846,
+        "macro_f1": 0.47424599141217183,
+        "weighted_f1": 0.4742459914121718,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.5180722891566265,
+            "recall": 0.43,
+            "f1": 0.46994535519125685,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 1.0,
+            "recall": 0.27,
+            "f1": 0.4251968503937008,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.6944444444444444,
+            "recall": 1.0,
+            "f1": 0.819672131147541,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.8103448275862069,
+            "recall": 0.94,
+            "f1": 0.8703703703703703,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.7913043478260869,
+            "recall": 0.91,
+            "f1": 0.8465116279069768,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.33613445378151263,
+            "recall": 0.8,
+            "f1": 0.47337278106508873,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.4021164021164021,
+            "recall": 0.76,
+            "f1": 0.5259515570934256,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.58,
+            "f1": 0.7341772151898734,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 43,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 57,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 100,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 27,
+            "INDEX": 3,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 69,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 100,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 6,
+            "INDEX_PINKY": 94,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 9,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 91,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 20,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 80,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 24,
+            "RING": 0,
+            "STOP": 76,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 13,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 87
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 40,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 2,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 58,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 33,
+            "INDEX_PINKY": 21,
+            "MIDDLE": 38,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 1,
+            "STOP": 0,
+            "THREE_FINGER": 7,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 7,
+        "num_classes_f1_below_020": 4
+      },
+      "inference_latency_ms_per_sample": 0.03091783076524734
+    },
+    "3. Logistic Regression (Full 68-D)": {
+      "val_metrics": {
+        "accuracy": 0.48538461538461536,
+        "macro_precision": 0.5688885393882507,
+        "macro_recall": 0.48538461538461536,
+        "macro_f1": 0.46089478283998,
+        "weighted_f1": 0.46089478283998,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.4596774193548387,
+            "recall": 0.57,
+            "f1": 0.5089285714285714,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.975609756097561,
+            "recall": 0.4,
+            "f1": 0.5673758865248227,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.9,
+            "recall": 0.09,
+            "f1": 0.16363636363636364,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.31851851851851853,
+            "recall": 0.43,
+            "f1": 0.3659574468085106,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.40718562874251496,
+            "recall": 0.68,
+            "f1": 0.5093632958801498,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.4291845493562232,
+            "recall": 1.0,
+            "f1": 0.6006006006006006,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.010638297872340425,
+            "recall": 0.01,
+            "f1": 0.010309278350515464,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 1.0,
+            "recall": 0.97,
+            "f1": 0.9847715736040609,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.8947368421052632,
+            "recall": 0.17,
+            "f1": 0.2857142857142857,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 39,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 33,
+            "STOP": 26,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 2
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 57,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 42,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 8,
+            "GRAB": 40,
+            "INDEX": 0,
+            "INDEX_PINKY": 52,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 9,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 91,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 57,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 43,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 7,
+            "PINKY": 0,
+            "REST": 68,
+            "RING": 0,
+            "STOP": 25,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 99,
+            "RING": 0,
+            "STOP": 1,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 2,
+            "GRAB": 1,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 97,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 99,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 83,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 17
+          }
+        },
+        "num_classes_f1_below_050": 6,
+        "num_classes_f1_below_020": 4
+      },
+      "test_metrics": {
+        "accuracy": 0.34076923076923077,
+        "macro_precision": 0.32072146044432964,
+        "macro_recall": 0.34076923076923077,
+        "macro_f1": 0.285961772852496,
+        "weighted_f1": 0.2859617728524961,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.022222222222222223,
+            "recall": 0.01,
+            "f1": 0.013793103448275862,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.66,
+            "recall": 0.99,
+            "f1": 0.792,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.5025125628140703,
+            "recall": 1.0,
+            "f1": 0.6688963210702341,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 0.9900990099009901,
+            "recall": 1.0,
+            "f1": 0.9950248756218906,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.6621621621621622,
+            "recall": 0.49,
+            "f1": 0.5632183908045977,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.2537313432835821,
+            "recall": 0.68,
+            "f1": 0.3695652173913043,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.07865168539325842,
+            "recall": 0.14,
+            "f1": 0.10071942446043165,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.12,
+            "f1": 0.21428571428571427,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 1,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 100,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 99,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 100,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 98,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 1,
+            "REST": 0,
+            "RING": 1,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 49,
+            "RING": 0,
+            "STOP": 51,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 32,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 68,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 62,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 24,
+            "RING": 0,
+            "STOP": 14,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 13,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 87
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 37,
+            "FOUR_FINGERS": 0,
+            "GRAB": 51,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 12,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 7,
+            "FOUR_FINGERS": 1,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 12,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 1,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 78,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 9,
+        "num_classes_f1_below_020": 7
+      },
+      "inference_latency_ms_per_sample": 0.0008133076973116169
+    },
+    "4. RBF SVM (Full 68-D)": {
+      "val_metrics": {
+        "accuracy": 0.47615384615384615,
+        "macro_precision": 0.467651777360766,
+        "macro_recall": 0.4761538461538461,
+        "macro_f1": 0.43261819234684923,
+        "weighted_f1": 0.4326181923468492,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.5252525252525253,
+            "recall": 0.52,
+            "f1": 0.5226130653266332,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 1.0,
+            "recall": 0.38,
+            "f1": 0.5507246376811594,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.25,
+            "recall": 0.09,
+            "f1": 0.1323529411764706,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.5376344086021505,
+            "recall": 1.0,
+            "f1": 0.6993006993006993,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.4107142857142857,
+            "recall": 0.69,
+            "f1": 0.5149253731343284,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.35587188612099646,
+            "recall": 1.0,
+            "f1": 0.5249343832020997,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 1.0,
+            "recall": 0.52,
+            "f1": 0.6842105263157895,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 19,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 81,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 52,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 6,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 42,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 38,
+            "INDEX": 2,
+            "INDEX_PINKY": 58,
+            "MIDDLE": 1,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 1,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 9,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 91,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 100,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 6,
+            "PINKY": 0,
+            "REST": 69,
+            "RING": 0,
+            "STOP": 24,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 99,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 47,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 52,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 99,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 23,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 77,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 5,
+        "num_classes_f1_below_020": 5
+      },
+      "test_metrics": {
+        "accuracy": 0.42153846153846153,
+        "macro_precision": 0.4446540745810494,
+        "macro_recall": 0.42153846153846153,
+        "macro_f1": 0.37571372023388044,
+        "weighted_f1": 0.37571372023388044,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 1.0,
+            "recall": 0.3,
+            "f1": 0.46153846153846156,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 1.0,
+            "recall": 0.32,
+            "f1": 0.48484848484848486,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.32894736842105265,
+            "recall": 1.0,
+            "f1": 0.49504950495049505,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.7818181818181819,
+            "recall": 0.86,
+            "f1": 0.819047619047619,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.2839506172839506,
+            "recall": 0.69,
+            "f1": 0.40233236151603496,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.38578680203045684,
+            "recall": 0.76,
+            "f1": 0.5117845117845118,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.55,
+            "f1": 0.7096774193548387,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 30,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 70,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 100,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 32,
+            "INDEX": 47,
+            "INDEX_PINKY": 2,
+            "MIDDLE": 19,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 100,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 99,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 1,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 86,
+            "RING": 0,
+            "STOP": 14,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 31,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 69,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 24,
+            "RING": 0,
+            "STOP": 76,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 7,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 7,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 86
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 45,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 55,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 58,
+            "INDEX_PINKY": 21,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 3,
+            "STOP": 0,
+            "THREE_FINGER": 18,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 9,
+        "num_classes_f1_below_020": 5
+      },
+      "inference_latency_ms_per_sample": 0.01446670769319798
+    },
+    "5. Extra Trees (Full 68-D)": {
+      "val_metrics": {
+        "accuracy": 0.5069230769230769,
+        "macro_precision": 0.5313518992664892,
+        "macro_recall": 0.5069230769230769,
+        "macro_f1": 0.46364662165584686,
+        "weighted_f1": 0.46364662165584686,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.9565217391304348,
+            "recall": 0.44,
+            "f1": 0.6027397260273972,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.9512195121951219,
+            "recall": 0.39,
+            "f1": 0.5531914893617021,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.7272727272727273,
+            "recall": 0.08,
+            "f1": 0.14414414414414414,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.6289308176100629,
+            "recall": 1.0,
+            "f1": 0.7722007722007722,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.41420118343195267,
+            "recall": 0.7,
+            "f1": 0.5204460966542751,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.33222591362126247,
+            "recall": 1.0,
+            "f1": 0.49875311720698257,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.015384615384615385,
+            "recall": 0.01,
+            "f1": 0.012121212121212121,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.8818181818181818,
+            "recall": 0.97,
+            "f1": 0.9238095238095239,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 44,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 42,
+            "THREE_FINGER": 13,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 39,
+            "INDEX": 2,
+            "INDEX_PINKY": 57,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 2,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 8,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 92,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 100,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 1,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 6,
+            "PINKY": 0,
+            "REST": 70,
+            "RING": 0,
+            "STOP": 22,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 99,
+            "RING": 0,
+            "STOP": 1,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 2,
+            "GRAB": 1,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 97,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 100,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 100,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 6,
+        "num_classes_f1_below_020": 5
+      },
+      "test_metrics": {
+        "accuracy": 0.5792307692307692,
+        "macro_precision": 0.5097579823981792,
+        "macro_recall": 0.5792307692307692,
+        "macro_f1": 0.5249556341932453,
+        "weighted_f1": 0.5249556341932453,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.611764705882353,
+            "recall": 0.52,
+            "f1": 0.5621621621621622,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.6060606060606061,
+            "recall": 1.0,
+            "f1": 0.7547169811320755,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.8157894736842105,
+            "recall": 0.93,
+            "f1": 0.8691588785046729,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.8598130841121495,
+            "recall": 0.92,
+            "f1": 0.8888888888888888,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.34649122807017546,
+            "recall": 0.79,
+            "f1": 0.4817073170731707,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.3869346733668342,
+            "recall": 0.77,
+            "f1": 0.5150501672240803,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.61,
+            "f1": 0.7577639751552795,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 52,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 48,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 100,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 99,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 100,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 7,
+            "INDEX_PINKY": 93,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 92,
+            "RING": 0,
+            "STOP": 8,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 21,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 79,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 8,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 15,
+            "RING": 0,
+            "STOP": 77,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 14,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 86
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 33,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 6,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 61,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 1,
+            "GRAB": 0,
+            "INDEX": 52,
+            "INDEX_PINKY": 20,
+            "MIDDLE": 7,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 1,
+            "STOP": 0,
+            "THREE_FINGER": 19,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 5,
+        "num_classes_f1_below_020": 4
+      },
+      "inference_latency_ms_per_sample": 0.04387126153764817
+    },
+    "6. Geometry Features (28-D) + Random Forest": {
+      "val_metrics": {
+        "accuracy": 0.5892307692307692,
+        "macro_precision": 0.5488063163366473,
+        "macro_recall": 0.5892307692307692,
+        "macro_f1": 0.5333076197138991,
+        "weighted_f1": 0.533307619713899,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.3561643835616438,
+            "recall": 0.52,
+            "f1": 0.42276422764227645,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.7575757575757576,
+            "recall": 0.75,
+            "f1": 0.7537688442211056,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.2857142857142857,
+            "recall": 0.02,
+            "f1": 0.037383177570093455,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.37438423645320196,
+            "recall": 0.76,
+            "f1": 0.5016501650165016,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.9838709677419355,
+            "recall": 0.61,
+            "f1": 0.7530864197530864,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.45871559633027525,
+            "recall": 1.0,
+            "f1": 0.6289308176100629,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.25,
+            "recall": 0.02,
+            "f1": 0.037037037037037035,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.6971830985915493,
+            "recall": 0.99,
+            "f1": 0.8181818181818182,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.970873786407767,
+            "recall": 1.0,
+            "f1": 0.9852216748768473,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 83,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 17,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 52,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 2,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 6,
+            "THREE_FINGER": 40,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 13,
+            "FOUR_FINGERS": 0,
+            "GRAB": 75,
+            "INDEX": 2,
+            "INDEX_PINKY": 10,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 2,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 93,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 2,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 3
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 24,
+            "INDEX": 0,
+            "INDEX_PINKY": 76,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 6,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 2,
+            "INDEX_PINKY": 31,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 61,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 94,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 1,
+            "RING": 0,
+            "STOP": 2,
+            "THREE_FINGER": 3,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 99,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 1,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 99,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 100
+          }
+        },
+        "num_classes_f1_below_050": 5,
+        "num_classes_f1_below_020": 4
+      },
+      "test_metrics": {
+        "accuracy": 0.5,
+        "macro_precision": 0.4371040802516839,
+        "macro_recall": 0.5,
+        "macro_f1": 0.44280912895745905,
+        "weighted_f1": 0.4428091289574591,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.5290322580645161,
+            "recall": 0.82,
+            "f1": 0.6431372549019608,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.4868421052631579,
+            "recall": 0.37,
+            "f1": 0.42045454545454547,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.5882352941176471,
+            "recall": 1.0,
+            "f1": 0.7407407407407407,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.39893617021276595,
+            "recall": 0.75,
+            "f1": 0.5208333333333334,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.2608695652173913,
+            "recall": 0.72,
+            "f1": 0.3829787234042553,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.5909090909090909,
+            "recall": 0.26,
+            "f1": 0.3611111111111111,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.9896907216494846,
+            "recall": 0.96,
+            "f1": 0.9746192893401016,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 0.8378378378378378,
+            "recall": 0.62,
+            "f1": 0.7126436781609196,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 82,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 1,
+            "RING": 0,
+            "STOP": 17,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 60,
+            "FOUR_FINGERS": 0,
+            "GRAB": 37,
+            "INDEX": 2,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 100,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 20,
+            "INDEX_PINKY": 75,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 3,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 2
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 100,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 12,
+            "MIDDLE": 16,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 72,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 73,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 26,
+            "THREE_FINGER": 1,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 1,
+            "PINKY": 0,
+            "REST": 3,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 96,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 2,
+            "FOUR_FINGERS": 0,
+            "GRAB": 36,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 62,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 4,
+            "FOUR_FINGERS": 0,
+            "GRAB": 3,
+            "INDEX": 48,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 30,
+            "PINKY": 0,
+            "REST": 1,
+            "RING": 1,
+            "STOP": 1,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 12,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 7,
+        "num_classes_f1_below_020": 4
+      },
+      "inference_latency_ms_per_sample": 0.04554835384568343
+    },
+    "7. Geometry Features (28-D) + RBF SVM": {
+      "val_metrics": {
+        "accuracy": 0.6061538461538462,
+        "macro_precision": 0.592993829464395,
+        "macro_recall": 0.6061538461538463,
+        "macro_f1": 0.5586223689063103,
+        "weighted_f1": 0.5586223689063103,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.5875,
+            "recall": 0.47,
+            "f1": 0.5222222222222223,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.9873417721518988,
+            "recall": 0.78,
+            "f1": 0.8715083798882681,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.6666666666666666,
+            "recall": 0.02,
+            "f1": 0.038834951456310676,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.684931506849315,
+            "recall": 1.0,
+            "f1": 0.8130081300813008,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.010416666666666666,
+            "recall": 0.01,
+            "f1": 0.01020408163265306,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.40828402366863903,
+            "recall": 0.69,
+            "f1": 0.5130111524163569,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.37453183520599254,
+            "recall": 1.0,
+            "f1": 0.5449591280653951,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.989247311827957,
+            "recall": 0.92,
+            "f1": 0.9533678756476683,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 20,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 15,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 65,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 47,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 10,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 43,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 1,
+            "FOUR_FINGERS": 6,
+            "GRAB": 78,
+            "INDEX": 1,
+            "INDEX_PINKY": 14,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 2,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 95,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 3,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 100,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 1,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 1,
+            "INDEX": 0,
+            "INDEX_PINKY": 7,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 69,
+            "RING": 0,
+            "STOP": 23,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 100,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 1,
+            "FOUR_FINGERS": 7,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 92,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 1,
+            "THUMB_ONLY": 99,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 100
+          }
+        },
+        "num_classes_f1_below_050": 4,
+        "num_classes_f1_below_020": 4
+      },
+      "test_metrics": {
+        "accuracy": 0.46692307692307694,
+        "macro_precision": 0.4869827051536546,
+        "macro_recall": 0.46692307692307694,
+        "macro_f1": 0.44190515871642105,
+        "weighted_f1": 0.44190515871642105,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.025,
+            "recall": 0.01,
+            "f1": 0.014285714285714285,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.8461538461538461,
+            "recall": 0.99,
+            "f1": 0.9124423963133641,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.9259259259259259,
+            "recall": 1.0,
+            "f1": 0.9615384615384616,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.5911949685534591,
+            "recall": 0.94,
+            "f1": 0.7258687258687259,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.26258992805755393,
+            "recall": 0.73,
+            "f1": 0.3862433862433862,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.06132075471698113,
+            "recall": 0.13,
+            "f1": 0.08333333333333333,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.8269230769230769,
+            "recall": 0.43,
+            "f1": 0.5657894736842105,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 0.7916666666666666,
+            "recall": 0.57,
+            "f1": 0.6627906976744186,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 1.0,
+            "recall": 0.28,
+            "f1": 0.4375,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 1,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 99,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 99,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 1,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 100,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 94,
+            "MIDDLE": 3,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 2,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 99,
+            "REST": 0,
+            "RING": 1,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 100,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 26,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 73,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 87,
+            "RING": 0,
+            "STOP": 13,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 3,
+            "FOUR_FINGERS": 6,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 38,
+            "MIDDLE": 2,
+            "PINKY": 0,
+            "REST": 8,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 43,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 1,
+            "FOUR_FINGERS": 0,
+            "GRAB": 17,
+            "INDEX": 0,
+            "INDEX_PINKY": 24,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 1,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 57,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 1,
+            "FOUR_FINGERS": 33,
+            "GRAB": 1,
+            "INDEX": 6,
+            "INDEX_PINKY": 3,
+            "MIDDLE": 2,
+            "PINKY": 0,
+            "REST": 2,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 9,
+            "THUMB_ONLY": 15,
+            "TWO_FINGER": 28
+          }
+        },
+        "num_classes_f1_below_050": 7,
+        "num_classes_f1_below_020": 5
+      },
+      "inference_latency_ms_per_sample": 0.016369969225846805
+    },
+    "8. Full 68-D + Simple Hybrid Rule Gate": {
+      "val_metrics": {
+        "accuracy": 0.4823076923076923,
+        "macro_precision": 0.5350420702010488,
+        "macro_recall": 0.4823076923076923,
+        "macro_f1": 0.42917216848959716,
+        "weighted_f1": 0.42917216848959716,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.1,
+            "recall": 0.01,
+            "f1": 0.01818181818181818,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333333333333333,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 0.967741935483871,
+            "recall": 0.3,
+            "f1": 0.4580152671755725,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.7272727272727273,
+            "recall": 0.08,
+            "f1": 0.14414414414414414,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.6410256410256411,
+            "recall": 1.0,
+            "f1": 0.78125,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.3054393305439331,
+            "recall": 0.73,
+            "f1": 0.4306784660766962,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.8807339449541285,
+            "recall": 0.96,
+            "f1": 0.9186602870813397,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 1,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 20,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 67,
+            "THREE_FINGER": 13,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 9,
+            "FOUR_FINGERS": 0,
+            "GRAB": 30,
+            "INDEX": 2,
+            "INDEX_PINKY": 56,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 2,
+            "STOP": 1,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 8,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 92,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 100,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 1,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 99,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 1,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 6,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 93,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 27,
+            "RING": 0,
+            "STOP": 73,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 4,
+            "THREE_FINGER": 96,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 1,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 99,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 100,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 8,
+        "num_classes_f1_below_020": 5
+      },
+      "test_metrics": {
+        "accuracy": 0.5753846153846154,
+        "macro_precision": 0.5085248005008213,
+        "macro_recall": 0.5753846153846155,
+        "macro_f1": 0.5218199755895531,
+        "weighted_f1": 0.5218199755895531,
+        "per_class_metrics": {
+          "CLOSE": {
+            "precision": 0.611764705882353,
+            "recall": 0.52,
+            "f1": 0.5621621621621622,
+            "support": 100
+          },
+          "FOUR_FINGERS": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "GRAB": {
+            "precision": 1.0,
+            "recall": 0.99,
+            "f1": 0.9949748743718593,
+            "support": 100
+          },
+          "INDEX": {
+            "precision": 0.6060606060606061,
+            "recall": 1.0,
+            "f1": 0.7547169811320755,
+            "support": 100
+          },
+          "INDEX_PINKY": {
+            "precision": 0.8303571428571429,
+            "recall": 0.93,
+            "f1": 0.8773584905660378,
+            "support": 100
+          },
+          "MIDDLE": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "PINKY": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 100
+          },
+          "REST": {
+            "precision": 0.8529411764705882,
+            "recall": 0.87,
+            "f1": 0.8613861386138614,
+            "support": 100
+          },
+          "RING": {
+            "precision": 0.34649122807017546,
+            "recall": 0.79,
+            "f1": 0.4817073170731707,
+            "support": 100
+          },
+          "STOP": {
+            "precision": 0.3632075471698113,
+            "recall": 0.77,
+            "f1": 0.4935897435897436,
+            "support": 100
+          },
+          "THREE_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          },
+          "THUMB_ONLY": {
+            "precision": 1.0,
+            "recall": 0.61,
+            "f1": 0.7577639751552795,
+            "support": 100
+          },
+          "TWO_FINGER": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 100
+          }
+        },
+        "confusion_matrix": {
+          "CLOSE": {
+            "CLOSE": 52,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 48,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "FOUR_FINGERS": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 100,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "GRAB": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 99,
+            "INDEX": 0,
+            "INDEX_PINKY": 1,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 100,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "INDEX_PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 7,
+            "INDEX_PINKY": 93,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "MIDDLE": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 100,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "PINKY": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 100,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "REST": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 87,
+            "RING": 0,
+            "STOP": 13,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "RING": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 21,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 79,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "STOP": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 8,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 15,
+            "RING": 0,
+            "STOP": 77,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          },
+          "THREE_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 0,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 15,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 85
+          },
+          "THUMB_ONLY": {
+            "CLOSE": 33,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 6,
+            "INDEX_PINKY": 0,
+            "MIDDLE": 0,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 0,
+            "STOP": 0,
+            "THREE_FINGER": 0,
+            "THUMB_ONLY": 61,
+            "TWO_FINGER": 0
+          },
+          "TWO_FINGER": {
+            "CLOSE": 0,
+            "FOUR_FINGERS": 0,
+            "GRAB": 0,
+            "INDEX": 52,
+            "INDEX_PINKY": 18,
+            "MIDDLE": 7,
+            "PINKY": 0,
+            "REST": 0,
+            "RING": 1,
+            "STOP": 7,
+            "THREE_FINGER": 15,
+            "THUMB_ONLY": 0,
+            "TWO_FINGER": 0
+          }
+        },
+        "num_classes_f1_below_050": 6,
+        "num_classes_f1_below_020": 4
+      },
+      "inference_latency_ms_per_sample": 0.06562096922873305
+    }
+  },
+  "ranking_by_val_macro_f1": [
+    "7. Geometry Features (28-D) + RBF SVM",
+    "6. Geometry Features (28-D) + Random Forest",
+    "2. 1-NN (Full 68-D)",
+    "5. Extra Trees (Full 68-D)",
+    "3. Logistic Regression (Full 68-D)",
+    "4. RBF SVM (Full 68-D)",
+    "8. Full 68-D + Simple Hybrid Rule Gate",
+    "1. Random Forest (Full 68-D)"
+  ],
+  "ranking_by_test_macro_f1": [
+    "5. Extra Trees (Full 68-D)",
+    "8. Full 68-D + Simple Hybrid Rule Gate",
+    "2. 1-NN (Full 68-D)",
+    "6. Geometry Features (28-D) + Random Forest",
+    "7. Geometry Features (28-D) + RBF SVM",
+    "1. Random Forest (Full 68-D)",
+    "4. RBF SVM (Full 68-D)",
+    "3. Logistic Regression (Full 68-D)"
+  ],
+  "ranking_by_test_accuracy": [
+    "5. Extra Trees (Full 68-D)",
+    "8. Full 68-D + Simple Hybrid Rule Gate",
+    "2. 1-NN (Full 68-D)",
+    "6. Geometry Features (28-D) + Random Forest",
+    "1. Random Forest (Full 68-D)",
+    "7. Geometry Features (28-D) + RBF SVM",
+    "4. RBF SVM (Full 68-D)",
+    "3. Logistic Regression (Full 68-D)"
+  ],
+  "best_val_model": "7. Geometry Features (28-D) + RBF SVM",
+  "best_test_model": "5. Extra Trees (Full 68-D)"
+}

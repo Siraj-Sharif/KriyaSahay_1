@@ -1,0 +1,59 @@
+{
+  "raw_dir": "d:\\NeuroGrip_Project\\pc\\data\\raw_v2_phase10h_middle",
+  "total_files": 2,
+  "total_samples": 400,
+  "total_unique_sessions": 2,
+  "duplicate_session_ids": [],
+  "class_sample_counts": {
+    "MIDDLE": 400
+  },
+  "target_classes_fulfilled": {
+    "FOUR_FINGERS": false,
+    "STOP": false,
+    "TWO_FINGER": false,
+    "THREE_FINGER": false,
+    "MIDDLE": true,
+    "INDEX_PINKY": false
+  },
+  "overall_qa_passed": true,
+  "session_summaries": [
+    {
+      "file_name": "dataset_v2_middle_3529a937.csv",
+      "label": "MIDDLE",
+      "session_id": "3529a937",
+      "sample_count": 200,
+      "handedness_counts": {
+        "RIGHT": 200
+      },
+      "is_feature_finite": true,
+      "non_finite_count": 0,
+      "duplicate_count": 0,
+      "expected_dim": 68,
+      "malformed_row_count": 0,
+      "sample_id_start": 1,
+      "sample_id_end": 200,
+      "is_sample_id_sequential": true,
+      "qa_passed": true,
+      "warnings": []
+    },
+    {
+      "file_name": "dataset_v2_middle_cf9b7593.csv",
+      "label": "MIDDLE",
+      "session_id": "cf9b7593",
+      "sample_count": 200,
+      "handedness_counts": {
+        "LEFT": 200
+      },
+      "is_feature_finite": true,
+      "non_finite_count": 0,
+      "duplicate_count": 0,
+      "expected_dim": 68,
+      "malformed_row_count": 0,
+      "sample_id_start": 1,
+      "sample_id_end": 200,
+      "is_sample_id_sequential": true,
+      "qa_passed": true,
+      "warnings": []
+    }
+  ]
+}

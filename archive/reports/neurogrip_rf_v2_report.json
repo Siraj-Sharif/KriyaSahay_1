@@ -1,0 +1,648 @@
+{
+  "trained_at": "2026-09-08T21:05:18.778738+00:00",
+  "model_type": "RandomForestClassifier",
+  "model_parameters": {
+    "n_estimators": 300,
+    "random_state": 42,
+    "class_weight": "balanced",
+    "n_jobs": -1
+  },
+  "feature_version": "v2",
+  "feature_dim": 68,
+  "training_sample_count": 1300,
+  "validation_sample_count": 1300,
+  "test_sample_count": 1300,
+  "class_names": [
+    "CLOSE",
+    "FOUR_FINGERS",
+    "GRAB",
+    "INDEX",
+    "INDEX_PINKY",
+    "MIDDLE",
+    "PINKY",
+    "REST",
+    "RING",
+    "STOP",
+    "THREE_FINGER",
+    "THUMB_ONLY",
+    "TWO_FINGER"
+  ],
+  "validation_metrics": {
+    "accuracy": 0.4,
+    "macro_precision": 0.37985536525774316,
+    "macro_recall": 0.4,
+    "macro_f1": 0.3449725525959624,
+    "weighted_f1": 0.34497255259596243
+  },
+  "final_test_metrics": {
+    "accuracy": 0.4723076923076923,
+    "macro_precision": 0.41262529156472066,
+    "macro_recall": 0.4723076923076922,
+    "macro_f1": 0.4242446223722846,
+    "weighted_f1": 0.4242446223722846
+  },
+  "per_class_metrics": {
+    "validation": {
+      "CLOSE": {
+        "precision": 0.11538461538461539,
+        "recall": 0.06,
+        "f1_score": 0.07894736842105263,
+        "support": 100
+      },
+      "FOUR_FINGERS": {
+        "precision": 0.9024390243902439,
+        "recall": 0.37,
+        "f1_score": 0.524822695035461,
+        "support": 100
+      },
+      "GRAB": {
+        "precision": 0.9736842105263158,
+        "recall": 0.37,
+        "f1_score": 0.5362318840579711,
+        "support": 100
+      },
+      "INDEX": {
+        "precision": 0.037037037037037035,
+        "recall": 0.01,
+        "f1_score": 0.015748031496062992,
+        "support": 100
+      },
+      "INDEX_PINKY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 100
+      },
+      "MIDDLE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 100
+      },
+      "PINKY": {
+        "precision": 0.35064935064935066,
+        "recall": 0.54,
+        "f1_score": 0.4251968503937008,
+        "support": 100
+      },
+      "REST": {
+        "precision": 0.46774193548387094,
+        "recall": 0.87,
+        "f1_score": 0.6083916083916084,
+        "support": 100
+      },
+      "RING": {
+        "precision": 0.2403846153846154,
+        "recall": 1.0,
+        "f1_score": 0.3875968992248062,
+        "support": 100
+      },
+      "STOP": {
+        "precision": 0.021739130434782608,
+        "recall": 0.01,
+        "f1_score": 0.0136986301369863,
+        "support": 100
+      },
+      "THREE_FINGER": {
+        "precision": 0.8290598290598291,
+        "recall": 0.97,
+        "f1_score": 0.8940092165898618,
+        "support": 100
+      },
+      "THUMB_ONLY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 100
+      },
+      "TWO_FINGER": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 100
+      }
+    },
+    "test": {
+      "CLOSE": {
+        "precision": 0.5597014925373134,
+        "recall": 0.75,
+        "f1_score": 0.6410256410256411,
+        "support": 100
+      },
+      "FOUR_FINGERS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 100
+      },
+      "GRAB": {
+        "precision": 1.0,
+        "recall": 0.99,
+        "f1_score": 0.9949748743718593,
+        "support": 100
+      },
+      "INDEX": {
+        "precision": 0.591715976331361,
+        "recall": 1.0,
+        "f1_score": 0.7434944237918215,
+        "support": 100
+      },
+      "INDEX_PINKY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 100
+      },
+      "MIDDLE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 100
+      },
+      "PINKY": {
+        "precision": 0.9900990099009901,
+        "recall": 1.0,
+        "f1_score": 0.9950248756218906,
+        "support": 100
+      },
+      "REST": {
+        "precision": 0.9347826086956522,
+        "recall": 0.86,
+        "f1_score": 0.8958333333333334,
+        "support": 100
+      },
+      "RING": {
+        "precision": 0.2581699346405229,
+        "recall": 0.79,
+        "f1_score": 0.3891625615763547,
+        "support": 100
+      },
+      "STOP": {
+        "precision": 0.10687022900763359,
+        "recall": 0.14,
+        "f1_score": 0.12121212121212122,
+        "support": 100
+      },
+      "THREE_FINGER": {
+        "precision": 0.0136986301369863,
+        "recall": 0.01,
+        "f1_score": 0.011560693641618497,
+        "support": 100
+      },
+      "THUMB_ONLY": {
+        "precision": 0.9090909090909091,
+        "recall": 0.6,
+        "f1_score": 0.7228915662650602,
+        "support": 100
+      },
+      "TWO_FINGER": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 100
+      }
+    }
+  },
+  "confusion_matrix": {
+    "validation": [
+      [
+        6,
+        0,
+        0,
+        24,
+        8,
+        0,
+        0,
+        0,
+        62,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        37,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        41,
+        20,
+        0,
+        0
+      ],
+      [
+        46,
+        0,
+        37,
+        1,
+        13,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        92,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        99,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54,
+        0,
+        46,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        8,
+        0,
+        87,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        98,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        97,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "test": [
+      [
+        75,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        99,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        99,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        86,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        79,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        14,
+        63,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        9,
+        1,
+        6,
+        83
+      ],
+      [
+        37,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        60,
+        0
+      ],
+      [
+        21,
+        0,
+        0,
+        66,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        9,
+        0,
+        0
+      ]
+    ]
+  },
+  "critical_pair_confusions": {
+    "STOP vs FOUR_FINGERS": {
+      "STOP_actual_predicted_as_FOUR_FINGERS": 17,
+      "FOUR_FINGERS_actual_predicted_as_STOP": 100
+    },
+    "INDEX vs MIDDLE": {
+      "INDEX_actual_predicted_as_MIDDLE": 0,
+      "MIDDLE_actual_predicted_as_INDEX": 0
+    },
+    "GRAB vs CLOSE": {
+      "GRAB_actual_predicted_as_CLOSE": 1,
+      "CLOSE_actual_predicted_as_GRAB": 0
+    },
+    "REST vs FOUR_FINGERS": {
+      "REST_actual_predicted_as_FOUR_FINGERS": 0,
+      "FOUR_FINGERS_actual_predicted_as_REST": 0
+    },
+    "TWO_FINGER vs INDEX_PINKY": {
+      "TWO_FINGER_actual_predicted_as_INDEX_PINKY": 0,
+      "INDEX_PINKY_actual_predicted_as_TWO_FINGER": 0
+    },
+    "THREE_FINGER vs FOUR_FINGERS": {
+      "THREE_FINGER_actual_predicted_as_FOUR_FINGERS": 0,
+      "FOUR_FINGERS_actual_predicted_as_THREE_FINGER": 0
+    }
+  },
+  "v1_baseline_comparison": {
+    "v1": {
+      "val_accuracy": 0.6004,
+      "val_macro_f1": 0.548,
+      "test_accuracy": 0.7362,
+      "test_macro_f1": 0.7021,
+      "stop_test_f1": 0.0,
+      "index_test_f1": 0.1121,
+      "four_fingers_test_f1": 0.5908
+    },
+    "v2": {
+      "val_accuracy": 0.4,
+      "val_macro_f1": 0.3449725525959624,
+      "test_accuracy": 0.4723076923076923,
+      "test_macro_f1": 0.4242446223722846,
+      "stop_test_f1": 0.12121212121212122,
+      "index_test_f1": 0.7434944237918215,
+      "four_fingers_test_f1": 0.0
+    }
+  }
+}

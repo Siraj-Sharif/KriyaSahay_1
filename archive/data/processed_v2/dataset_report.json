@@ -1,0 +1,110 @@
+{
+  "total_samples": 3900,
+  "total_rows": 3900,
+  "valid_rows": 3900,
+  "invalid_rows": 0,
+  "duplicate_rows": 0,
+  "feature_dim": 68,
+  "feature_version": "v2",
+  "class_counts": {
+    "INDEX": 300,
+    "MIDDLE": 300,
+    "RING": 300,
+    "PINKY": 300,
+    "THUMB_ONLY": 300,
+    "TWO_FINGER": 300,
+    "THREE_FINGER": 300,
+    "INDEX_PINKY": 300,
+    "FOUR_FINGERS": 300,
+    "CLOSE": 300,
+    "GRAB": 300,
+    "REST": 300,
+    "STOP": 300
+  },
+  "sessions_per_class": {
+    "INDEX": 3,
+    "MIDDLE": 3,
+    "RING": 3,
+    "PINKY": 3,
+    "THUMB_ONLY": 3,
+    "TWO_FINGER": 3,
+    "THREE_FINGER": 3,
+    "INDEX_PINKY": 3,
+    "FOUR_FINGERS": 3,
+    "CLOSE": 3,
+    "GRAB": 3,
+    "REST": 3,
+    "STOP": 3
+  },
+  "handedness_counts": {
+    "RIGHT": 2496,
+    "LEFT": 1404
+  },
+  "handedness_per_split": {
+    "train": {
+      "RIGHT": 777,
+      "LEFT": 523
+    },
+    "val": {
+      "LEFT": 403,
+      "RIGHT": 897
+    },
+    "test": {
+      "LEFT": 478,
+      "RIGHT": 822
+    }
+  },
+  "split_counts": {
+    "train": 1300,
+    "val": 1300,
+    "test": 1300
+  },
+  "split_sessions": {
+    "train": [
+      "00975a40",
+      "074efa27",
+      "12b37a51",
+      "4440714e",
+      "44a8d2b1",
+      "50c25a3a",
+      "59b5deb3",
+      "6e6156a9",
+      "9298d4a7",
+      "9ed6e8a4",
+      "a3d7731f",
+      "d11c8328",
+      "f201633c"
+    ],
+    "val": [
+      "0c09728d",
+      "2f6cb1a9",
+      "30b9512a",
+      "4a56a531",
+      "5b0ebee6",
+      "66204906",
+      "7423ad8a",
+      "888b8faf",
+      "921bebc9",
+      "93093601",
+      "9746bae6",
+      "cc78f23d",
+      "dc093c62"
+    ],
+    "test": [
+      "04795eb9",
+      "12146e1e",
+      "1e0fa45b",
+      "2a894dad",
+      "53233b15",
+      "66c78629",
+      "704874c0",
+      "9e729013",
+      "a1e7305c",
+      "bc8cdd5d",
+      "cad64713",
+      "cbe96b07",
+      "f5dea6a0"
+    ]
+  },
+  "warnings": []
+}

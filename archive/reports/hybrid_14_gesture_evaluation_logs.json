@@ -1,0 +1,2773 @@
+[
+  {
+    "trial_id": "TRIAL_20260914_181031_CALL",
+    "timestamp": "2026-09-14T18:10:31.855621",
+    "ground_truth": "CALL",
+    "expected_route": "HAGRID",
+    "duration_s": 5.053438186645508,
+    "total_frames": 50,
+    "correct_frames": 31,
+    "wrong_frames": 16,
+    "no_command_frames": 3,
+    "accuracy_percentage": 62.0,
+    "command_switch_count": 8,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.8052477255780647,
+    "min_confidence": 0.5014685392379761,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 88.18289600021672,
+    "median_latency_ms": 89.63620000577066,
+    "p95_latency_ms": 109.94944498525001,
+    "observed_fps": 9.89425380370393,
+    "model_route_distribution": {
+      "HAGRID": 47,
+      "N/A": 3
+    },
+    "top_prediction_distribution": {
+      "CALL": 31,
+      "THUMBS_UP": 16,
+      "NO_COMMAND": 3
+    },
+    "raw_prediction_distribution": {
+      "call": 25,
+      "like": 22,
+      "NONE": 3
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389631859,
+        "ground_truth": "CALL",
+        "predicted_command": "CALL",
+        "model_used": "HAGRID",
+        "raw_prediction": "call",
+        "confidence": 1.0,
+        "latency_ms": 93.78270001616329,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389631961,
+        "ground_truth": "CALL",
+        "predicted_command": "CALL",
+        "model_used": "HAGRID",
+        "raw_prediction": "call",
+        "confidence": 1.0,
+        "latency_ms": 84.72769998479635,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389632069,
+        "ground_truth": "CALL",
+        "predicted_command": "CALL",
+        "model_used": "HAGRID",
+        "raw_prediction": "call",
+        "confidence": 1.0,
+        "latency_ms": 80.59769999817945,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389632158,
+        "ground_truth": "CALL",
+        "predicted_command": "CALL",
+        "model_used": "HAGRID",
+        "raw_prediction": "call",
+        "confidence": 1.0,
+        "latency_ms": 85.6058000063058,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389632255,
+        "ground_truth": "CALL",
+        "predicted_command": "CALL",
+        "model_used": "HAGRID",
+        "raw_prediction": "call",
+        "confidence": 1.0,
+        "latency_ms": 104.000499995891,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181040_CALL",
+    "timestamp": "2026-09-14T18:10:40.831506",
+    "ground_truth": "CALL",
+    "expected_route": "HAGRID",
+    "duration_s": 5.029026508331299,
+    "total_frames": 105,
+    "correct_frames": 9,
+    "wrong_frames": 8,
+    "no_command_frames": 88,
+    "accuracy_percentage": 8.571428571428571,
+    "command_switch_count": 5,
+    "emitted_command_count": 1,
+    "mean_confidence": 0.5614761276089214,
+    "min_confidence": 0.22333333333333333,
+    "max_confidence": 0.9702532887458801,
+    "mean_latency_ms": 33.42869428618412,
+    "median_latency_ms": 20.21940000122413,
+    "p95_latency_ms": 101.43192000105046,
+    "observed_fps": 20.878792312200492,
+    "model_route_distribution": {
+      "HAGRID": 17,
+      "EXTRA_TREES": 2,
+      "N/A": 86
+    },
+    "top_prediction_distribution": {
+      "CALL": 9,
+      "THUMBS_UP": 5,
+      "NO_COMMAND": 88,
+      "GRIP": 3
+    },
+    "raw_prediction_distribution": {
+      "call": 9,
+      "like": 5,
+      "UNKNOWN": 2,
+      "grip": 3,
+      "NONE": 86
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389640834,
+        "ground_truth": "CALL",
+        "predicted_command": "CALL",
+        "model_used": "HAGRID",
+        "raw_prediction": "call",
+        "confidence": 0.559147298336029,
+        "latency_ms": 97.2743000020273,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389640939,
+        "ground_truth": "CALL",
+        "predicted_command": "CALL",
+        "model_used": "HAGRID",
+        "raw_prediction": "call",
+        "confidence": 0.4842815697193146,
+        "latency_ms": 97.50499998335727,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389641054,
+        "ground_truth": "CALL",
+        "predicted_command": "THUMBS_UP",
+        "model_used": "HAGRID",
+        "raw_prediction": "like",
+        "confidence": 0.5422182083129883,
+        "latency_ms": 87.33509999001399,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389641163,
+        "ground_truth": "CALL",
+        "predicted_command": "THUMBS_UP",
+        "model_used": "HAGRID",
+        "raw_prediction": "like",
+        "confidence": 0.5156244039535522,
+        "latency_ms": 87.27719998569228,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389641271,
+        "ground_truth": "CALL",
+        "predicted_command": "THUMBS_UP",
+        "model_used": "HAGRID",
+        "raw_prediction": "like",
+        "confidence": 0.5941773056983948,
+        "latency_ms": 95.51869999268092,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181052_CLOSED_FIST",
+    "timestamp": "2026-09-14T18:10:52.655980",
+    "ground_truth": "CLOSED_FIST",
+    "expected_route": "HAGRID",
+    "duration_s": 5.027751445770264,
+    "total_frames": 53,
+    "correct_frames": 53,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 1,
+    "mean_confidence": 0.9801601376173632,
+    "min_confidence": 0.7,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 82.56894528518765,
+    "median_latency_ms": 82.01480002026074,
+    "p95_latency_ms": 91.76699999952689,
+    "observed_fps": 10.54149167309926,
+    "model_route_distribution": {
+      "HAGRID": 53
+    },
+    "top_prediction_distribution": {
+      "CLOSED_FIST": 53
+    },
+    "raw_prediction_distribution": {
+      "fist": 53
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389652660,
+        "ground_truth": "CLOSED_FIST",
+        "predicted_command": "CLOSED_FIST",
+        "model_used": "HAGRID",
+        "raw_prediction": "fist",
+        "confidence": 0.9995738863945007,
+        "latency_ms": 79.53230000566691,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389652747,
+        "ground_truth": "CLOSED_FIST",
+        "predicted_command": "CLOSED_FIST",
+        "model_used": "HAGRID",
+        "raw_prediction": "fist",
+        "confidence": 0.9995738863945007,
+        "latency_ms": 83.6202000209596,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389652848,
+        "ground_truth": "CLOSED_FIST",
+        "predicted_command": "CLOSED_FIST",
+        "model_used": "HAGRID",
+        "raw_prediction": "fist",
+        "confidence": 0.9993395209312439,
+        "latency_ms": 78.70859999093227,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389652942,
+        "ground_truth": "CLOSED_FIST",
+        "predicted_command": "CLOSED_FIST",
+        "model_used": "HAGRID",
+        "raw_prediction": "fist",
+        "confidence": 0.7,
+        "latency_ms": 81.64109999779612,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": "CLOSED_FIST",
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389653037,
+        "ground_truth": "CLOSED_FIST",
+        "predicted_command": "CLOSED_FIST",
+        "model_used": "HAGRID",
+        "raw_prediction": "fist",
+        "confidence": 0.75,
+        "latency_ms": 82.97240000683814,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181112_FOUR_FINGERS",
+    "timestamp": "2026-09-14T18:11:12.506333",
+    "ground_truth": "FOUR_FINGERS",
+    "expected_route": "HAGRID",
+    "duration_s": 5.020452976226807,
+    "total_frames": 55,
+    "correct_frames": 55,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 1,
+    "mean_confidence": 0.9775858155163852,
+    "min_confidence": 0.7,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 75.56343272973953,
+    "median_latency_ms": 74.81700001517311,
+    "p95_latency_ms": 81.34028000931721,
+    "observed_fps": 10.95518676510661,
+    "model_route_distribution": {
+      "HAGRID": 55
+    },
+    "top_prediction_distribution": {
+      "FOUR_FINGERS": 55
+    },
+    "raw_prediction_distribution": {
+      "four": 55
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389672508,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "four",
+        "confidence": 0.9892352223396301,
+        "latency_ms": 81.40019999700598,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389672597,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "four",
+        "confidence": 0.9825025796890259,
+        "latency_ms": 74.96109997737221,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389672682,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "four",
+        "confidence": 0.980899453163147,
+        "latency_ms": 85.38110001245514,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389672790,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "four",
+        "confidence": 0.9738057255744934,
+        "latency_ms": 81.00130001548678,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389672884,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "four",
+        "confidence": 0.9435544013977051,
+        "latency_ms": 76.95710001280531,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181118_FOUR_FINGERS",
+    "timestamp": "2026-09-14T18:11:18.087547",
+    "ground_truth": "FOUR_FINGERS",
+    "expected_route": "HAGRID",
+    "duration_s": 0.8093609809875488,
+    "total_frames": 16,
+    "correct_frames": 6,
+    "wrong_frames": 0,
+    "no_command_frames": 10,
+    "accuracy_percentage": 37.5,
+    "command_switch_count": 1,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.9750000000000001,
+    "min_confidence": 0.9,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 39.70462500001304,
+    "median_latency_ms": 20.103449991438538,
+    "p95_latency_ms": 83.70272500178544,
+    "observed_fps": 19.76868217748459,
+    "model_route_distribution": {
+      "HAGRID": 6,
+      "N/A": 10
+    },
+    "top_prediction_distribution": {
+      "FOUR_FINGERS": 6,
+      "NO_COMMAND": 10
+    },
+    "raw_prediction_distribution": {
+      "four": 4,
+      "fist": 2,
+      "NONE": 10
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389678090,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "four",
+        "confidence": 1.0,
+        "latency_ms": 82.97970000421628,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389678181,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "four",
+        "confidence": 1.0,
+        "latency_ms": 85.8717999944929,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389678285,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "four",
+        "confidence": 1.0,
+        "latency_ms": 82.04290000139736,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389678377,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "four",
+        "confidence": 1.0,
+        "latency_ms": 79.3481000000611,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389678470,
+        "ground_truth": "FOUR_FINGERS",
+        "predicted_command": "FOUR_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "fist",
+        "confidence": 0.95,
+        "latency_ms": 76.19960000738502,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181135_GRABBING",
+    "timestamp": "2026-09-14T18:11:35.326994",
+    "ground_truth": "GRABBING",
+    "expected_route": "HAGRID",
+    "duration_s": 5.074598550796509,
+    "total_frames": 54,
+    "correct_frames": 54,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 1.0,
+    "min_confidence": 1.0,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 79.6149925919491,
+    "median_latency_ms": 78.01610001479276,
+    "p95_latency_ms": 88.88888000219595,
+    "observed_fps": 10.641235845449126,
+    "model_route_distribution": {
+      "HAGRID": 54
+    },
+    "top_prediction_distribution": {
+      "GRABBING": 54
+    },
+    "raw_prediction_distribution": {
+      "grabbing": 54
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389695329,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "grabbing",
+        "confidence": 1.0,
+        "latency_ms": 78.03420000709593,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389695414,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "grabbing",
+        "confidence": 1.0,
+        "latency_ms": 79.00420000078157,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389695510,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "grabbing",
+        "confidence": 1.0,
+        "latency_ms": 77.78629998210818,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389695604,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "grabbing",
+        "confidence": 1.0,
+        "latency_ms": 79.12919999216683,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389695696,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "grabbing",
+        "confidence": 1.0,
+        "latency_ms": 79.07619999605231,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181140_GRABBING",
+    "timestamp": "2026-09-14T18:11:40.993992",
+    "ground_truth": "GRABBING",
+    "expected_route": "HAGRID",
+    "duration_s": 0.6155216693878174,
+    "total_frames": 7,
+    "correct_frames": 7,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.9285714285714286,
+    "min_confidence": 0.8,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 85.6277428600671,
+    "median_latency_ms": 86.78360001067631,
+    "p95_latency_ms": 91.75626998476218,
+    "observed_fps": 11.372467206494983,
+    "model_route_distribution": {
+      "HAGRID": 7
+    },
+    "top_prediction_distribution": {
+      "GRABBING": 7
+    },
+    "raw_prediction_distribution": {
+      "grabbing": 3,
+      "stop": 2,
+      "fist": 2
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389700996,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "grabbing",
+        "confidence": 1.0,
+        "latency_ms": 89.30500000133179,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389701094,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "grabbing",
+        "confidence": 1.0,
+        "latency_ms": 83.51080000284128,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389701203,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "grabbing",
+        "confidence": 1.0,
+        "latency_ms": 86.78360001067631,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389701310,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.95,
+        "latency_ms": 80.5232000129763,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389701404,
+        "ground_truth": "GRABBING",
+        "predicted_command": "GRABBING",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.9,
+        "latency_ms": 76.39430000563152,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181150_GRIP",
+    "timestamp": "2026-09-14T18:11:50.264733",
+    "ground_truth": "GRIP",
+    "expected_route": "HAGRID",
+    "duration_s": 5.056251049041748,
+    "total_frames": 67,
+    "correct_frames": 39,
+    "wrong_frames": 0,
+    "no_command_frames": 28,
+    "accuracy_percentage": 58.2089552238806,
+    "command_switch_count": 12,
+    "emitted_command_count": 3,
+    "mean_confidence": 0.9929277438383836,
+    "min_confidence": 0.9304735660552979,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 63.44905373190335,
+    "median_latency_ms": 85.36019999883138,
+    "p95_latency_ms": 106.1087699868949,
+    "observed_fps": 13.250924321231581,
+    "model_route_distribution": {
+      "HAGRID": 39,
+      "N/A": 28
+    },
+    "top_prediction_distribution": {
+      "GRIP": 39,
+      "NO_COMMAND": 28
+    },
+    "raw_prediction_distribution": {
+      "grip": 39,
+      "NONE": 28
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389710267,
+        "ground_truth": "GRIP",
+        "predicted_command": "GRIP",
+        "model_used": "HAGRID",
+        "raw_prediction": "grip",
+        "confidence": 1.0,
+        "latency_ms": 90.02239999244921,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389710366,
+        "ground_truth": "GRIP",
+        "predicted_command": "GRIP",
+        "model_used": "HAGRID",
+        "raw_prediction": "grip",
+        "confidence": 1.0,
+        "latency_ms": 93.52880000369623,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389710468,
+        "ground_truth": "GRIP",
+        "predicted_command": "GRIP",
+        "model_used": "HAGRID",
+        "raw_prediction": "grip",
+        "confidence": 1.0,
+        "latency_ms": 107.20159998163581,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389710585,
+        "ground_truth": "GRIP",
+        "predicted_command": "GRIP",
+        "model_used": "HAGRID",
+        "raw_prediction": "grip",
+        "confidence": 1.0,
+        "latency_ms": 91.52220000396483,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389710683,
+        "ground_truth": "GRIP",
+        "predicted_command": "GRIP",
+        "model_used": "HAGRID",
+        "raw_prediction": "grip",
+        "confidence": 1.0,
+        "latency_ms": 90.30480001820251,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181204_THUMBS_UP",
+    "timestamp": "2026-09-14T18:12:04.493540",
+    "ground_truth": "THUMBS_UP",
+    "expected_route": "HAGRID",
+    "duration_s": 5.038867712020874,
+    "total_frames": 51,
+    "correct_frames": 51,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 1,
+    "mean_confidence": 0.9356165785415501,
+    "min_confidence": 0.7,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 86.60741764812401,
+    "median_latency_ms": 85.91389999492094,
+    "p95_latency_ms": 100.37279999232851,
+    "observed_fps": 10.121321478302134,
+    "model_route_distribution": {
+      "HAGRID": 51
+    },
+    "top_prediction_distribution": {
+      "THUMBS_UP": 51
+    },
+    "raw_prediction_distribution": {
+      "like": 45,
+      "call": 5,
+      "middle_finger": 1
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389724496,
+        "ground_truth": "THUMBS_UP",
+        "predicted_command": "THUMBS_UP",
+        "model_used": "HAGRID",
+        "raw_prediction": "like",
+        "confidence": 0.9849957823753357,
+        "latency_ms": 78.01379999727942,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389724583,
+        "ground_truth": "THUMBS_UP",
+        "predicted_command": "THUMBS_UP",
+        "model_used": "HAGRID",
+        "raw_prediction": "like",
+        "confidence": 0.9897651672363281,
+        "latency_ms": 97.72280001197942,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389724691,
+        "ground_truth": "THUMBS_UP",
+        "predicted_command": "THUMBS_UP",
+        "model_used": "HAGRID",
+        "raw_prediction": "like",
+        "confidence": 0.9976015686988831,
+        "latency_ms": 85.16919999965467,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389724793,
+        "ground_truth": "THUMBS_UP",
+        "predicted_command": "THUMBS_UP",
+        "model_used": "HAGRID",
+        "raw_prediction": "like",
+        "confidence": 0.9971342086791992,
+        "latency_ms": 90.48390001407824,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389724901,
+        "ground_truth": "THUMBS_UP",
+        "predicted_command": "THUMBS_UP",
+        "model_used": "HAGRID",
+        "raw_prediction": "like",
+        "confidence": 0.996948778629303,
+        "latency_ms": 78.85920000262558,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181218_PINKY",
+    "timestamp": "2026-09-14T18:12:18.062541",
+    "ground_truth": "PINKY",
+    "expected_route": "EXTRA_TREES",
+    "duration_s": 5.00304102897644,
+    "total_frames": 39,
+    "correct_frames": 5,
+    "wrong_frames": 3,
+    "no_command_frames": 31,
+    "accuracy_percentage": 12.82051282051282,
+    "command_switch_count": 11,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.6331441648703855,
+    "min_confidence": 0.38,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 118.72891538988392,
+    "median_latency_ms": 129.32590002310462,
+    "p95_latency_ms": 145.55810002202634,
+    "observed_fps": 7.795258878374402,
+    "model_route_distribution": {
+      "EXTRA_TREES": 31,
+      "HAGRID": 4,
+      "N/A": 4
+    },
+    "top_prediction_distribution": {
+      "PINKY": 5,
+      "NO_COMMAND": 31,
+      "OK": 1,
+      "GRIP": 2
+    },
+    "raw_prediction_distribution": {
+      "PINKY": 5,
+      "UNKNOWN": 26,
+      "ok": 2,
+      "NONE": 4,
+      "grip": 2
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389738064,
+        "ground_truth": "PINKY",
+        "predicted_command": "PINKY",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "PINKY",
+        "confidence": 0.6133333333333333,
+        "latency_ms": 135.99280000198632,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389738210,
+        "ground_truth": "PINKY",
+        "predicted_command": "PINKY",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "PINKY",
+        "confidence": 0.6233333333333333,
+        "latency_ms": 142.211700003827,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389738372,
+        "ground_truth": "PINKY",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "UNKNOWN",
+        "confidence": 0.5966666666666667,
+        "latency_ms": 130.78310000128113,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389738513,
+        "ground_truth": "PINKY",
+        "predicted_command": "PINKY",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "PINKY",
+        "confidence": 0.6066666666666667,
+        "latency_ms": 142.45680000749417,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389738671,
+        "ground_truth": "PINKY",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "UNKNOWN",
+        "confidence": 0.5933333333333334,
+        "latency_ms": 130.65400000778027,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181227_PINKY",
+    "timestamp": "2026-09-14T18:12:27.029889",
+    "ground_truth": "PINKY",
+    "expected_route": "EXTRA_TREES",
+    "duration_s": 5.136792421340942,
+    "total_frames": 35,
+    "correct_frames": 16,
+    "wrong_frames": 0,
+    "no_command_frames": 19,
+    "accuracy_percentage": 45.714285714285715,
+    "command_switch_count": 11,
+    "emitted_command_count": 1,
+    "mean_confidence": 0.5953333333333333,
+    "min_confidence": 0.45666666666666667,
+    "max_confidence": 0.7,
+    "mean_latency_ms": 135.4655000015295,
+    "median_latency_ms": 135.25320001645014,
+    "p95_latency_ms": 146.1351099977037,
+    "observed_fps": 6.813590491722336,
+    "model_route_distribution": {
+      "EXTRA_TREES": 35
+    },
+    "top_prediction_distribution": {
+      "PINKY": 16,
+      "NO_COMMAND": 19
+    },
+    "raw_prediction_distribution": {
+      "PINKY": 15,
+      "UNKNOWN": 20
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389747031,
+        "ground_truth": "PINKY",
+        "predicted_command": "PINKY",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "PINKY",
+        "confidence": 0.65,
+        "latency_ms": 129.48340000002645,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389747170,
+        "ground_truth": "PINKY",
+        "predicted_command": "PINKY",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "PINKY",
+        "confidence": 0.6366666666666667,
+        "latency_ms": 131.1942000174895,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389747322,
+        "ground_truth": "PINKY",
+        "predicted_command": "PINKY",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "PINKY",
+        "confidence": 0.6033333333333334,
+        "latency_ms": 144.86120000947267,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389747478,
+        "ground_truth": "PINKY",
+        "predicted_command": "PINKY",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "PINKY",
+        "confidence": 0.64,
+        "latency_ms": 134.99750001938082,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389747637,
+        "ground_truth": "PINKY",
+        "predicted_command": "PINKY",
+        "model_used": "EXTRA_TREES",
+        "raw_prediction": "PINKY",
+        "confidence": 0.6333333333333333,
+        "latency_ms": 130.0937000196427,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181241_MIDDLE_FINGER",
+    "timestamp": "2026-09-14T18:12:41.656196",
+    "ground_truth": "MIDDLE_FINGER",
+    "expected_route": "HAGRID",
+    "duration_s": 5.07421875,
+    "total_frames": 50,
+    "correct_frames": 50,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 1,
+    "mean_confidence": 0.9744989967346191,
+    "min_confidence": 0.7,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 89.60944999998901,
+    "median_latency_ms": 89.38580001995433,
+    "p95_latency_ms": 100.39690500852885,
+    "observed_fps": 9.85373364126251,
+    "model_route_distribution": {
+      "HAGRID": 50
+    },
+    "top_prediction_distribution": {
+      "MIDDLE_FINGER": 50
+    },
+    "raw_prediction_distribution": {
+      "middle_finger": 50
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389761659,
+        "ground_truth": "MIDDLE_FINGER",
+        "predicted_command": "MIDDLE_FINGER",
+        "model_used": "HAGRID",
+        "raw_prediction": "middle_finger",
+        "confidence": 0.9952664375305176,
+        "latency_ms": 86.59520000219345,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389761755,
+        "ground_truth": "MIDDLE_FINGER",
+        "predicted_command": "MIDDLE_FINGER",
+        "model_used": "HAGRID",
+        "raw_prediction": "middle_finger",
+        "confidence": 0.987928569316864,
+        "latency_ms": 83.9855000085663,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389761847,
+        "ground_truth": "MIDDLE_FINGER",
+        "predicted_command": "MIDDLE_FINGER",
+        "model_used": "HAGRID",
+        "raw_prediction": "middle_finger",
+        "confidence": 0.9956608414649963,
+        "latency_ms": 100.99050001008436,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389761960,
+        "ground_truth": "MIDDLE_FINGER",
+        "predicted_command": "MIDDLE_FINGER",
+        "model_used": "HAGRID",
+        "raw_prediction": "middle_finger",
+        "confidence": 0.9980469942092896,
+        "latency_ms": 96.66720000677742,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389762066,
+        "ground_truth": "MIDDLE_FINGER",
+        "predicted_command": "MIDDLE_FINGER",
+        "model_used": "HAGRID",
+        "raw_prediction": "middle_finger",
+        "confidence": 0.9980469942092896,
+        "latency_ms": 96.83799999766052,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181254_OK",
+    "timestamp": "2026-09-14T18:12:54.899485",
+    "ground_truth": "OK",
+    "expected_route": "HAGRID",
+    "duration_s": 5.0227742195129395,
+    "total_frames": 57,
+    "correct_frames": 43,
+    "wrong_frames": 0,
+    "no_command_frames": 14,
+    "accuracy_percentage": 75.43859649122807,
+    "command_switch_count": 28,
+    "emitted_command_count": 2,
+    "mean_confidence": 0.988621243210726,
+    "min_confidence": 0.8446584343910217,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 76.20175789608702,
+    "median_latency_ms": 87.09899999666959,
+    "p95_latency_ms": 98.88936001225375,
+    "observed_fps": 11.348310218397058,
+    "model_route_distribution": {
+      "HAGRID": 43,
+      "N/A": 14
+    },
+    "top_prediction_distribution": {
+      "OK": 43,
+      "NO_COMMAND": 14
+    },
+    "raw_prediction_distribution": {
+      "ok": 43,
+      "NONE": 14
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389774901,
+        "ground_truth": "OK",
+        "predicted_command": "OK",
+        "model_used": "HAGRID",
+        "raw_prediction": "ok",
+        "confidence": 0.9988148212432861,
+        "latency_ms": 96.98880001087673,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389775010,
+        "ground_truth": "OK",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 33.293899992713705,
+        "hand_count": "2+",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389775054,
+        "ground_truth": "OK",
+        "predicted_command": "OK",
+        "model_used": "HAGRID",
+        "raw_prediction": "ok",
+        "confidence": 0.998977780342102,
+        "latency_ms": 83.6476000258699,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389775147,
+        "ground_truth": "OK",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 30.205799994291738,
+        "hand_count": "2+",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389775188,
+        "ground_truth": "OK",
+        "predicted_command": "OK",
+        "model_used": "HAGRID",
+        "raw_prediction": "ok",
+        "confidence": 0.998094379901886,
+        "latency_ms": 87.1165000135079,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181326_INDEX_FINGER",
+    "timestamp": "2026-09-14T18:13:26.169344",
+    "ground_truth": "INDEX_FINGER",
+    "expected_route": "EXTRA_TREES",
+    "duration_s": 5.086714267730713,
+    "total_frames": 50,
+    "correct_frames": 0,
+    "wrong_frames": 0,
+    "no_command_frames": 50,
+    "accuracy_percentage": 0.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 1.0,
+    "min_confidence": 1.0,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 89.79775400017388,
+    "median_latency_ms": 89.65360000729561,
+    "p95_latency_ms": 102.50936498487135,
+    "observed_fps": 9.829527936568377,
+    "model_route_distribution": {
+      "HAGRID": 50
+    },
+    "top_prediction_distribution": {
+      "NO_COMMAND": 50
+    },
+    "raw_prediction_distribution": {
+      "one": 50
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389806173,
+        "ground_truth": "INDEX_FINGER",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "one",
+        "confidence": 1.0,
+        "latency_ms": 96.92609999910928,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389806278,
+        "ground_truth": "INDEX_FINGER",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "one",
+        "confidence": 1.0,
+        "latency_ms": 116.08069998328574,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389806405,
+        "ground_truth": "INDEX_FINGER",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "one",
+        "confidence": 1.0,
+        "latency_ms": 93.82809998351149,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389806518,
+        "ground_truth": "INDEX_FINGER",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "one",
+        "confidence": 1.0,
+        "latency_ms": 82.22570002544671,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389806610,
+        "ground_truth": "INDEX_FINGER",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "one",
+        "confidence": 1.0,
+        "latency_ms": 81.94419997744262,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181341_INDEX_PINKY",
+    "timestamp": "2026-09-14T18:13:41.687089",
+    "ground_truth": "INDEX_PINKY",
+    "expected_route": "HAGRID",
+    "duration_s": 5.0315446853637695,
+    "total_frames": 51,
+    "correct_frames": 51,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 1,
+    "mean_confidence": 0.9447758578786664,
+    "min_confidence": 0.6542527675628662,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 86.28209999890304,
+    "median_latency_ms": 84.48289998341352,
+    "p95_latency_ms": 97.70574999856763,
+    "observed_fps": 10.136052283974262,
+    "model_route_distribution": {
+      "HAGRID": 51
+    },
+    "top_prediction_distribution": {
+      "INDEX_PINKY": 51
+    },
+    "raw_prediction_distribution": {
+      "rock": 51
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389821690,
+        "ground_truth": "INDEX_PINKY",
+        "predicted_command": "INDEX_PINKY",
+        "model_used": "HAGRID",
+        "raw_prediction": "rock",
+        "confidence": 0.7844749093055725,
+        "latency_ms": 98.86169998208061,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389821797,
+        "ground_truth": "INDEX_PINKY",
+        "predicted_command": "INDEX_PINKY",
+        "model_used": "HAGRID",
+        "raw_prediction": "rock",
+        "confidence": 0.7844749093055725,
+        "latency_ms": 84.48039999348111,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389821899,
+        "ground_truth": "INDEX_PINKY",
+        "predicted_command": "INDEX_PINKY",
+        "model_used": "HAGRID",
+        "raw_prediction": "rock",
+        "confidence": 0.6542527675628662,
+        "latency_ms": 80.9527000237722,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389821997,
+        "ground_truth": "INDEX_PINKY",
+        "predicted_command": "INDEX_PINKY",
+        "model_used": "HAGRID",
+        "raw_prediction": "rock",
+        "confidence": 0.6832489371299744,
+        "latency_ms": 83.69319999474101,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389822091,
+        "ground_truth": "INDEX_PINKY",
+        "predicted_command": "INDEX_PINKY",
+        "model_used": "HAGRID",
+        "raw_prediction": "rock",
+        "confidence": 0.9080602526664734,
+        "latency_ms": 79.01099999435246,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181402_STOP",
+    "timestamp": "2026-09-14T18:14:02.115722",
+    "ground_truth": "STOP",
+    "expected_route": "HAGRID",
+    "duration_s": 5.084277629852295,
+    "total_frames": 54,
+    "correct_frames": 0,
+    "wrong_frames": 0,
+    "no_command_frames": 54,
+    "accuracy_percentage": 0.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.9861111111111112,
+    "min_confidence": 0.75,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 82.33065740528724,
+    "median_latency_ms": 82.29039999423549,
+    "p95_latency_ms": 86.97685000224737,
+    "observed_fps": 10.620977832315733,
+    "model_route_distribution": {
+      "HAGRID": 54
+    },
+    "top_prediction_distribution": {
+      "NO_COMMAND": 54
+    },
+    "raw_prediction_distribution": {
+      "stop": 54
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389842118,
+        "ground_truth": "STOP",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.75,
+        "latency_ms": 85.40850001736544,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389842213,
+        "ground_truth": "STOP",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.8,
+        "latency_ms": 83.39929999783635,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389842313,
+        "ground_truth": "STOP",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.85,
+        "latency_ms": 85.0184999871999,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389842407,
+        "ground_truth": "STOP",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.9,
+        "latency_ms": 81.16140001220629,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389842501,
+        "ground_truth": "STOP",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.95,
+        "latency_ms": 82.03379999031313,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181433_TWO_FINGERS",
+    "timestamp": "2026-09-14T18:14:33.663822",
+    "ground_truth": "TWO_FINGERS",
+    "expected_route": "EXTRA_TREES",
+    "duration_s": 5.013827323913574,
+    "total_frames": 57,
+    "correct_frames": 0,
+    "wrong_frames": 0,
+    "no_command_frames": 57,
+    "accuracy_percentage": 0.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.947622844328483,
+    "min_confidence": 0.7263952493667603,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 72.61022631581382,
+    "median_latency_ms": 77.74280000012368,
+    "p95_latency_ms": 89.26864000386558,
+    "observed_fps": 11.368560645903596,
+    "model_route_distribution": {
+      "HAGRID": 48,
+      "N/A": 9
+    },
+    "top_prediction_distribution": {
+      "NO_COMMAND": 57
+    },
+    "raw_prediction_distribution": {
+      "peace": 48,
+      "NONE": 9
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389873666,
+        "ground_truth": "TWO_FINGERS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "peace",
+        "confidence": 1.0,
+        "latency_ms": 89.89450000808574,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389873770,
+        "ground_truth": "TWO_FINGERS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "peace",
+        "confidence": 1.0,
+        "latency_ms": 86.10879999469034,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389873871,
+        "ground_truth": "TWO_FINGERS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "peace",
+        "confidence": 1.0,
+        "latency_ms": 85.44109997455962,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389873980,
+        "ground_truth": "TWO_FINGERS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "peace",
+        "confidence": 1.0,
+        "latency_ms": 84.59810001659207,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389874087,
+        "ground_truth": "TWO_FINGERS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 29.78310000617057,
+        "hand_count": "2+",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181458_THREE_FINGERS",
+    "timestamp": "2026-09-14T18:14:58.972777",
+    "ground_truth": "THREE_FINGERS",
+    "expected_route": "HAGRID",
+    "duration_s": 5.08165431022644,
+    "total_frames": 55,
+    "correct_frames": 55,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 1,
+    "mean_confidence": 0.9806817111102017,
+    "min_confidence": 0.7,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 79.08602909248492,
+    "median_latency_ms": 78.69270001538098,
+    "p95_latency_ms": 84.97734000557101,
+    "observed_fps": 10.823247045615974,
+    "model_route_distribution": {
+      "HAGRID": 55
+    },
+    "top_prediction_distribution": {
+      "THREE_FINGERS": 55
+    },
+    "raw_prediction_distribution": {
+      "three": 55
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389898975,
+        "ground_truth": "THREE_FINGERS",
+        "predicted_command": "THREE_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "three",
+        "confidence": 0.998916745185852,
+        "latency_ms": 76.99229998979717,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389899061,
+        "ground_truth": "THREE_FINGERS",
+        "predicted_command": "THREE_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "three",
+        "confidence": 0.9984550476074219,
+        "latency_ms": 79.03610001085326,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389899155,
+        "ground_truth": "THREE_FINGERS",
+        "predicted_command": "THREE_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "three",
+        "confidence": 0.9976429343223572,
+        "latency_ms": 78.67370001622476,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389899248,
+        "ground_truth": "THREE_FINGERS",
+        "predicted_command": "THREE_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "three",
+        "confidence": 0.9981829524040222,
+        "latency_ms": 78.92100000753999,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389899341,
+        "ground_truth": "THREE_FINGERS",
+        "predicted_command": "THREE_FINGERS",
+        "model_used": "HAGRID",
+        "raw_prediction": "three",
+        "confidence": 0.9981216788291931,
+        "latency_ms": 77.53930002218112,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181510_NO_HAND",
+    "timestamp": "2026-09-14T18:15:10.671621",
+    "ground_truth": "NO_HAND",
+    "expected_route": "N/A",
+    "duration_s": 5.02577018737793,
+    "total_frames": 151,
+    "correct_frames": 151,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.0,
+    "min_confidence": 0.0,
+    "max_confidence": 0.0,
+    "mean_latency_ms": 12.621633112908569,
+    "median_latency_ms": 11.513799981912598,
+    "p95_latency_ms": 19.990150001831353,
+    "observed_fps": 30.04514619057432,
+    "model_route_distribution": {
+      "N/A": 151
+    },
+    "top_prediction_distribution": {
+      "NO_COMMAND": 151
+    },
+    "raw_prediction_distribution": {
+      "NONE": 151
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389910674,
+        "ground_truth": "NO_HAND",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 11.210500000743195,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389910721,
+        "ground_truth": "NO_HAND",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 11.907900014193729,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389910745,
+        "ground_truth": "NO_HAND",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 10.806199978105724,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389910787,
+        "ground_truth": "NO_HAND",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 10.899100016104057,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389910804,
+        "ground_truth": "NO_HAND",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 11.724299984052777,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181526_TWO_HANDS",
+    "timestamp": "2026-09-14T18:15:26.263419",
+    "ground_truth": "TWO_HANDS",
+    "expected_route": "N/A",
+    "duration_s": 5.019331932067871,
+    "total_frames": 146,
+    "correct_frames": 146,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.9244264364242554,
+    "min_confidence": 0.9244264364242554,
+    "max_confidence": 0.9244264364242554,
+    "mean_latency_ms": 14.50125890571069,
+    "median_latency_ms": 12.049950018990785,
+    "p95_latency_ms": 23.930199997266755,
+    "observed_fps": 29.08753634467261,
+    "model_route_distribution": {
+      "N/A": 144,
+      "HAGRID": 2
+    },
+    "top_prediction_distribution": {
+      "NO_COMMAND": 146
+    },
+    "raw_prediction_distribution": {
+      "NONE": 144,
+      "stop": 2
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389926267,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 23.001399997156113,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389926297,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 13.16709999809973,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389926330,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 11.960000003455207,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389926354,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 11.212899989914149,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389926374,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 13.228800002252683,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181537_TWO_HANDS",
+    "timestamp": "2026-09-14T18:15:37.643446",
+    "ground_truth": "TWO_HANDS",
+    "expected_route": "N/A",
+    "duration_s": 5.016842842102051,
+    "total_frames": 133,
+    "correct_frames": 133,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.0,
+    "min_confidence": 0.0,
+    "max_confidence": 0.0,
+    "mean_latency_ms": 22.292275184807472,
+    "median_latency_ms": 23.0065000068862,
+    "p95_latency_ms": 27.618219988653436,
+    "observed_fps": 26.510696903607442,
+    "model_route_distribution": {
+      "N/A": 133
+    },
+    "top_prediction_distribution": {
+      "NO_COMMAND": 133
+    },
+    "raw_prediction_distribution": {
+      "NONE": 133
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389937674,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 14.199299999745563,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389937699,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 13.818199979141355,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389937746,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 15.01460000872612,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389937770,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 14.263199991546571,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389937810,
+        "ground_truth": "TWO_HANDS",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 13.481899979524314,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181555_OUT_OF_FRAME",
+    "timestamp": "2026-09-14T18:15:55.998986",
+    "ground_truth": "OUT_OF_FRAME",
+    "expected_route": "N/A",
+    "duration_s": 5.0227882862091064,
+    "total_frames": 152,
+    "correct_frames": 152,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.0,
+    "min_confidence": 0.0,
+    "max_confidence": 0.0,
+    "mean_latency_ms": 14.26090460537173,
+    "median_latency_ms": 13.195599996834062,
+    "p95_latency_ms": 20.639434989425343,
+    "observed_fps": 30.26207583093659,
+    "model_route_distribution": {
+      "N/A": 152
+    },
+    "top_prediction_distribution": {
+      "NO_COMMAND": 152
+    },
+    "raw_prediction_distribution": {
+      "NONE": 152
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389956018,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 12.406099995132536,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389956048,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 14.134800003375858,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389956083,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 12.125599983846769,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389956111,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 12.23809999646619,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389956147,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "N/A",
+        "raw_prediction": "NONE",
+        "confidence": 0.0,
+        "latency_ms": 11.564600019482896,
+        "hand_count": "0",
+        "stabilizer_state": "UNKNOWN_STATE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181622_UNSUPPORTED",
+    "timestamp": "2026-09-14T18:16:22.026964",
+    "ground_truth": "UNSUPPORTED",
+    "expected_route": "N/A",
+    "duration_s": 5.042629957199097,
+    "total_frames": 43,
+    "correct_frames": 43,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 1.0,
+    "min_confidence": 1.0,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 105.63379069817317,
+    "median_latency_ms": 100.87490000296384,
+    "p95_latency_ms": 137.53697000793179,
+    "observed_fps": 8.527296344363156,
+    "model_route_distribution": {
+      "HAGRID": 40,
+      "EXTRA_TREES": 3
+    },
+    "top_prediction_distribution": {
+      "NO_COMMAND": 43
+    },
+    "raw_prediction_distribution": {
+      "dislike": 40,
+      "UNKNOWN": 3
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789389982030,
+        "ground_truth": "UNSUPPORTED",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "dislike",
+        "confidence": 1.0,
+        "latency_ms": 104.51450000982732,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389982144,
+        "ground_truth": "UNSUPPORTED",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "dislike",
+        "confidence": 1.0,
+        "latency_ms": 98.22020001593046,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389982257,
+        "ground_truth": "UNSUPPORTED",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "dislike",
+        "confidence": 1.0,
+        "latency_ms": 113.21119999047369,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389982378,
+        "ground_truth": "UNSUPPORTED",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "dislike",
+        "confidence": 1.0,
+        "latency_ms": 96.45819998695515,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789389982493,
+        "ground_truth": "UNSUPPORTED",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "dislike",
+        "confidence": 1.0,
+        "latency_ms": 91.89370000967756,
+        "hand_count": "1",
+        "stabilizer_state": "STABLE",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181715_OUT_OF_FRAME",
+    "timestamp": "2026-09-14T18:17:15.489273",
+    "ground_truth": "OUT_OF_FRAME",
+    "expected_route": "N/A",
+    "duration_s": 5.094123840332031,
+    "total_frames": 50,
+    "correct_frames": 50,
+    "wrong_frames": 0,
+    "no_command_frames": 0,
+    "accuracy_percentage": 100.0,
+    "command_switch_count": 0,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.9691806592941284,
+    "min_confidence": 0.7,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 88.02996199810877,
+    "median_latency_ms": 87.82245000475086,
+    "p95_latency_ms": 95.61396500066621,
+    "observed_fps": 9.815230561167715,
+    "model_route_distribution": {
+      "HAGRID": 50
+    },
+    "top_prediction_distribution": {
+      "NO_COMMAND": 50
+    },
+    "raw_prediction_distribution": {
+      "stop": 50
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 0,
+      "stop_active_frames": 0,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789390035491,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.8675273060798645,
+        "latency_ms": 83.24219999485649,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789390035583,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.8675273060798645,
+        "latency_ms": 85.26269998401403,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789390035680,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.9278079867362976,
+        "latency_ms": 82.93609999236651,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789390035787,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.9086492657661438,
+        "latency_ms": 87.0359999826178,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      },
+      {
+        "timestamp_ms": 1789390035898,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "NO_COMMAND",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 0.9375211000442505,
+        "latency_ms": 77.55339998402633,
+        "hand_count": "1",
+        "stabilizer_state": "STABILIZING",
+        "emitted_command": null,
+        "is_stop_armed": false,
+        "is_stop_active": false
+      }
+    ]
+  },
+  {
+    "trial_id": "TRIAL_20260914_181729_OUT_OF_FRAME",
+    "timestamp": "2026-09-14T18:17:29.585489",
+    "ground_truth": "OUT_OF_FRAME",
+    "expected_route": "N/A",
+    "duration_s": 5.088587522506714,
+    "total_frames": 54,
+    "correct_frames": 23,
+    "wrong_frames": 31,
+    "no_command_frames": 0,
+    "accuracy_percentage": 42.592592592592595,
+    "command_switch_count": 1,
+    "emitted_command_count": 0,
+    "mean_confidence": 0.9877184861236148,
+    "min_confidence": 0.7931541204452515,
+    "max_confidence": 1.0,
+    "mean_latency_ms": 80.94954259609545,
+    "median_latency_ms": 80.87420000811107,
+    "p95_latency_ms": 85.12786501378287,
+    "observed_fps": 10.611982158341418,
+    "model_route_distribution": {
+      "HAGRID": 54
+    },
+    "top_prediction_distribution": {
+      "STOP": 31,
+      "NO_COMMAND": 23
+    },
+    "raw_prediction_distribution": {
+      "stop": 54
+    },
+    "stop_safety_details": {
+      "stop_armed_frames": 31,
+      "stop_active_frames": 31,
+      "stop_emitted_frames": 0,
+      "non_stop_bypass_count": 0,
+      "safety_path_integrity": true
+    },
+    "frame_samples": [
+      {
+        "timestamp_ms": 1789390049588,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "STOP",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 1.0,
+        "latency_ms": 83.04440000210889,
+        "hand_count": "1",
+        "stabilizer_state": "STOP",
+        "emitted_command": null,
+        "is_stop_armed": true,
+        "is_stop_active": true
+      },
+      {
+        "timestamp_ms": 1789390049679,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "STOP",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 1.0,
+        "latency_ms": 79.78800000273623,
+        "hand_count": "1",
+        "stabilizer_state": "STOP",
+        "emitted_command": null,
+        "is_stop_armed": true,
+        "is_stop_active": true
+      },
+      {
+        "timestamp_ms": 1789390049769,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "STOP",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 1.0,
+        "latency_ms": 81.88360001076944,
+        "hand_count": "1",
+        "stabilizer_state": "STOP",
+        "emitted_command": null,
+        "is_stop_armed": true,
+        "is_stop_active": true
+      },
+      {
+        "timestamp_ms": 1789390049873,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "STOP",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 1.0,
+        "latency_ms": 76.51159999659285,
+        "hand_count": "1",
+        "stabilizer_state": "STOP",
+        "emitted_command": null,
+        "is_stop_armed": true,
+        "is_stop_active": true
+      },
+      {
+        "timestamp_ms": 1789390049969,
+        "ground_truth": "OUT_OF_FRAME",
+        "predicted_command": "STOP",
+        "model_used": "HAGRID",
+        "raw_prediction": "stop",
+        "confidence": 1.0,
+        "latency_ms": 89.31379998102784,
+        "hand_count": "1",
+        "stabilizer_state": "STOP",
+        "emitted_command": null,
+        "is_stop_armed": true,
+        "is_stop_active": true
+      }
+    ]
+  }
+]

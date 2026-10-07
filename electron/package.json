@@ -1,0 +1,56 @@
+{
+  "name": "neurogrip-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NeuroGrip — AI robotic hand control (desktop)",
+  "author": "NeuroGrip",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "node scripts/prepare.cjs --build && electron .",
+    "start:fast": "node scripts/prepare.cjs && electron .",
+    "prefetch-model": "node scripts/prefetch-model.mjs",
+    "dist": "node scripts/prepare.cjs --build && node scripts/prefetch-model.mjs && electron-builder --win"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0"
+  },
+  "devDependencies": {
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.neurogrip.app",
+    "productName": "NeuroGrip",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.cjs",
+      "preload.cjs",
+      "stt.cjs",
+      "renderer/**/*",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "node_modules/onnxruntime-node/**/*",
+      "node_modules/sharp/**/*",
+      "node_modules/@img/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "models",
+        "to": "models"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+# NeuroGrip PC-Side CV System — Python Dependencies
+# Target: Python 3.11, Windows, offline runtime after initial install
+
+# ── Core CV and hand tracking ─────────────────────────────────────────────────
+mediapipe>=0.10.14          # Tasks API (HandLandmarker); removes legacy solutions API
+opencv-python>=4.8.0        # Camera capture + visualization
+
+# ── Numerics ──────────────────────────────────────────────────────────────────
+numpy>=1.24.0
+
+# ── ML classifier ─────────────────────────────────────────────────────────────
+scikit-learn>=1.3.0         # RandomForestClassifier, MLPClassifier, StandardScaler
+joblib>=1.3.0               # Model serialization (.pkl bundles)
+
+# ── Configuration ─────────────────────────────────────────────────────────────
+PyYAML>=6.0
+
+# ── Serial communication ──────────────────────────────────────────────────────
+pyserial>=3.5
+
+# ── GUI Frontend ──────────────────────────────────────────────────────────────
+PySide6>=6.6.0
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=7.4.0
+pytest-mock>=3.11.0
+

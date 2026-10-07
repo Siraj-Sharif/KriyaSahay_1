@@ -1,0 +1,20 @@
+{
+  "file_name": "dataset_v2_three_finger_60128564.csv",
+  "label": "THREE_FINGER",
+  "session_id": "60128564",
+  "sample_count": 200,
+  "handedness_counts": {
+    "LEFT": 87,
+    "RIGHT": 113
+  },
+  "is_feature_finite": true,
+  "non_finite_count": 0,
+  "duplicate_count": 0,
+  "expected_dim": 68,
+  "malformed_row_count": 0,
+  "sample_id_start": 1,
+  "sample_id_end": 200,
+  "is_sample_id_sequential": true,
+  "qa_passed": true,
+  "warnings": []
+}

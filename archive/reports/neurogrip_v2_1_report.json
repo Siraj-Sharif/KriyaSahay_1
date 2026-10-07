@@ -1,0 +1,685 @@
+{
+  "trained_at": "2026-09-08T22:21:58.951924+00:00",
+  "dataset": "v2.1",
+  "feature_version": "v2",
+  "feature_dim": 68,
+  "training_samples": 2800,
+  "validation_samples": 1400,
+  "test_samples": 1500,
+  "selected_candidate_key": "extra_trees",
+  "selected_model_name": "Extra Trees",
+  "selected_by": "validation_macro_f1",
+  "saved_model_file": "neurogrip_extra_trees_v2_1.pkl",
+  "candidates_validation_benchmark": {
+    "random_forest": {
+      "name": "Random Forest",
+      "val_accuracy": 0.6492857142857142,
+      "val_macro_precision": 0.7367561301639148,
+      "val_macro_recall": 0.6223076923076923,
+      "val_macro_f1": 0.6057178369743045,
+      "val_weighted_f1": 0.6188061796981742
+    },
+    "extra_trees": {
+      "name": "Extra Trees",
+      "val_accuracy": 0.7814285714285715,
+      "val_macro_precision": 0.8349555230396551,
+      "val_macro_recall": 0.7646153846153847,
+      "val_macro_f1": 0.7324034324218469,
+      "val_weighted_f1": 0.749605759372598
+    },
+    "rbf_svm": {
+      "name": "RBF SVM",
+      "val_accuracy": 0.6414285714285715,
+      "val_macro_precision": 0.7212706021141211,
+      "val_macro_recall": 0.6153846153846153,
+      "val_macro_f1": 0.5646132886462417,
+      "val_weighted_f1": 0.5897043287763165
+    },
+    "knn_1": {
+      "name": "1-NN",
+      "val_accuracy": 0.6871428571428572,
+      "val_macro_precision": 0.7272735222162228,
+      "val_macro_recall": 0.6653846153846155,
+      "val_macro_f1": 0.6125245574007108,
+      "val_weighted_f1": 0.6365338930666397
+    }
+  },
+  "selected_model_validation_metrics": {
+    "accuracy": 0.7814285714285715,
+    "macro_precision": 0.8349555230396551,
+    "macro_recall": 0.7646153846153847,
+    "macro_f1": 0.7324034324218469,
+    "weighted_f1": 0.749605759372598,
+    "per_class": {
+      "CLOSE": {
+        "precision": 1.0,
+        "recall": 0.78,
+        "f1_score": 0.8764044943820225,
+        "support": 100
+      },
+      "FOUR_FINGERS": {
+        "precision": 0.853448275862069,
+        "recall": 0.99,
+        "f1_score": 0.9166666666666666,
+        "support": 100
+      },
+      "GRAB": {
+        "precision": 1.0,
+        "recall": 0.38,
+        "f1_score": 0.5507246376811594,
+        "support": 100
+      },
+      "INDEX": {
+        "precision": 0.6666666666666666,
+        "recall": 0.02,
+        "f1_score": 0.038834951456310676,
+        "support": 100
+      },
+      "INDEX_PINKY": {
+        "precision": 0.9478672985781991,
+        "recall": 1.0,
+        "f1_score": 0.9732360097323601,
+        "support": 200
+      },
+      "MIDDLE": {
+        "precision": 0.5025906735751295,
+        "recall": 0.97,
+        "f1_score": 0.6621160409556314,
+        "support": 100
+      },
+      "PINKY": {
+        "precision": 0.9900990099009901,
+        "recall": 1.0,
+        "f1_score": 0.9950248756218906,
+        "support": 100
+      },
+      "REST": {
+        "precision": 1.0,
+        "recall": 0.27,
+        "f1_score": 0.4251968503937008,
+        "support": 100
+      },
+      "RING": {
+        "precision": 0.7851239669421488,
+        "recall": 0.95,
+        "f1_score": 0.8597285067873304,
+        "support": 100
+      },
+      "STOP": {
+        "precision": 0.45714285714285713,
+        "recall": 0.96,
+        "f1_score": 0.6193548387096774,
+        "support": 100
+      },
+      "THREE_FINGER": {
+        "precision": 0.8125,
+        "recall": 0.91,
+        "f1_score": 0.8584905660377359,
+        "support": 100
+      },
+      "THUMB_ONLY": {
+        "precision": 0.8389830508474576,
+        "recall": 0.99,
+        "f1_score": 0.908256880733945,
+        "support": 100
+      },
+      "TWO_FINGER": {
+        "precision": 1.0,
+        "recall": 0.72,
+        "f1_score": 0.8372093023255814,
+        "support": 100
+      }
+    },
+    "confusion_matrix": [
+      [
+        78,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        99,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        38,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        45,
+        13,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        7,
+        91,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        97,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        27,
+        0,
+        65,
+        2,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        1,
+        0,
+        95,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        96,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        91,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        99,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        3,
+        0,
+        0,
+        0,
+        0,
+        2,
+        5,
+        15,
+        72
+      ]
+    ]
+  },
+  "selected_model_test_metrics": {
+    "accuracy": 0.8033333333333333,
+    "macro_precision": 0.8743801416950038,
+    "macro_recall": 0.8353846153846155,
+    "macro_f1": 0.782216619983579,
+    "weighted_f1": 0.7644413536967822,
+    "per_class": {
+      "CLOSE": {
+        "precision": 1.0,
+        "recall": 0.97,
+        "f1_score": 0.9847715736040609,
+        "support": 100
+      },
+      "FOUR_FINGERS": {
+        "precision": 0.9567307692307693,
+        "recall": 0.995,
+        "f1_score": 0.9754901960784313,
+        "support": 200
+      },
+      "GRAB": {
+        "precision": 1.0,
+        "recall": 0.99,
+        "f1_score": 0.9949748743718593,
+        "support": 100
+      },
+      "INDEX": {
+        "precision": 1.0,
+        "recall": 0.83,
+        "f1_score": 0.907103825136612,
+        "support": 100
+      },
+      "INDEX_PINKY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 100
+      },
+      "MIDDLE": {
+        "precision": 0.9285714285714286,
+        "recall": 0.195,
+        "f1_score": 0.32231404958677684,
+        "support": 200
+      },
+      "PINKY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "support": 100
+      },
+      "REST": {
+        "precision": 1.0,
+        "recall": 0.01,
+        "f1_score": 0.019801980198019802,
+        "support": 100
+      },
+      "RING": {
+        "precision": 0.44144144144144143,
+        "recall": 0.98,
+        "f1_score": 0.6086956521739131,
+        "support": 100
+      },
+      "STOP": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1_score": 0.6666666666666666,
+        "support": 100
+      },
+      "THREE_FINGER": {
+        "precision": 0.8653846153846154,
+        "recall": 0.9,
+        "f1_score": 0.8823529411764706,
+        "support": 100
+      },
+      "THUMB_ONLY": {
+        "precision": 0.9705882352941176,
+        "recall": 0.99,
+        "f1_score": 0.9801980198019802,
+        "support": 100
+      },
+      "TWO_FINGER": {
+        "precision": 0.704225352112676,
+        "recall": 1.0,
+        "f1_score": 0.8264462809917356,
+        "support": 100
+      }
+    },
+    "confusion_matrix": [
+      [
+        97,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        199,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        99,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        83,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        12,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        39,
+        0,
+        0,
+        121,
+        0,
+        1,
+        0,
+        39
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        99,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        98,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        90,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        99,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        100
+      ]
+    ]
+  },
+  "v2_vs_v2_1_comparison": {
+    "old_v2_baseline": {
+      "val_accuracy": 0.4,
+      "val_macro_f1": 0.345,
+      "test_accuracy": 0.4723,
+      "test_macro_f1": 0.4242,
+      "per_class_test_f1": {
+        "CLOSE": 0.641,
+        "FOUR_FINGERS": 0.0,
+        "GRAB": 0.995,
+        "INDEX": 0.7435,
+        "INDEX_PINKY": 0.0,
+        "MIDDLE": 0.0,
+        "PINKY": 0.995,
+        "REST": 0.8958,
+        "RING": 0.3892,
+        "STOP": 0.1212,
+        "THREE_FINGER": 0.0116,
+        "THUMB_ONLY": 0.7229,
+        "TWO_FINGER": 0.0
+      }
+    },
+    "v2_1_selected": {
+      "val_accuracy": 0.7814285714285715,
+      "val_macro_f1": 0.7324034324218469,
+      "test_accuracy": 0.8033333333333333,
+      "test_macro_f1": 0.782216619983579
+    }
+  },
+  "targeted_class_generalization_analysis": {
+    "verdict": "Phase 10H targeted data collection SUCCESS: 6/6 targeted gesture classes showed significant generalization improvements.",
+    "classes": {
+      "STOP": {
+        "old_v2_test_f1": 0.1212,
+        "v2_1_test_f1": 0.6666666666666666,
+        "delta_f1": 0.5454666666666667,
+        "status": "DRAMATIC IMPROVEMENT"
+      },
+      "FOUR_FINGERS": {
+        "old_v2_test_f1": 0.0,
+        "v2_1_test_f1": 0.9754901960784313,
+        "delta_f1": 0.9754901960784313,
+        "status": "DRAMATIC IMPROVEMENT"
+      },
+      "TWO_FINGER": {
+        "old_v2_test_f1": 0.0,
+        "v2_1_test_f1": 0.8264462809917356,
+        "delta_f1": 0.8264462809917356,
+        "status": "DRAMATIC IMPROVEMENT"
+      },
+      "THREE_FINGER": {
+        "old_v2_test_f1": 0.0116,
+        "v2_1_test_f1": 0.8823529411764706,
+        "delta_f1": 0.8707529411764705,
+        "status": "DRAMATIC IMPROVEMENT"
+      },
+      "MIDDLE": {
+        "old_v2_test_f1": 0.0,
+        "v2_1_test_f1": 0.32231404958677684,
+        "delta_f1": 0.32231404958677684,
+        "status": "DRAMATIC IMPROVEMENT"
+      },
+      "INDEX_PINKY": {
+        "old_v2_test_f1": 0.0,
+        "v2_1_test_f1": 1.0,
+        "delta_f1": 1.0,
+        "status": "DRAMATIC IMPROVEMENT"
+      }
+    }
+  }
+}

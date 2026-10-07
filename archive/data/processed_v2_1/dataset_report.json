@@ -1,0 +1,119 @@
+{
+  "total_samples": 5700,
+  "total_rows": 5700,
+  "valid_rows": 5700,
+  "invalid_rows": 0,
+  "duplicate_rows": 0,
+  "feature_dim": 68,
+  "feature_version": "v2",
+  "class_counts": {
+    "INDEX": 300,
+    "MIDDLE": 500,
+    "RING": 300,
+    "PINKY": 300,
+    "THUMB_ONLY": 300,
+    "TWO_FINGER": 700,
+    "THREE_FINGER": 700,
+    "INDEX_PINKY": 500,
+    "FOUR_FINGERS": 700,
+    "CLOSE": 300,
+    "GRAB": 300,
+    "REST": 300,
+    "STOP": 500
+  },
+  "sessions_per_class": {
+    "INDEX": 3,
+    "MIDDLE": 4,
+    "RING": 3,
+    "PINKY": 3,
+    "THUMB_ONLY": 3,
+    "TWO_FINGER": 5,
+    "THREE_FINGER": 5,
+    "INDEX_PINKY": 4,
+    "FOUR_FINGERS": 5,
+    "CLOSE": 3,
+    "GRAB": 3,
+    "REST": 3,
+    "STOP": 4
+  },
+  "handedness_counts": {
+    "RIGHT": 3452,
+    "LEFT": 2248
+  },
+  "handedness_per_split": {
+    "train": {
+      "RIGHT": 1815,
+      "LEFT": 985
+    },
+    "val": {
+      "LEFT": 774,
+      "RIGHT": 626
+    },
+    "test": {
+      "LEFT": 489,
+      "RIGHT": 1011
+    }
+  },
+  "split_counts": {
+    "train": 2800,
+    "val": 1400,
+    "test": 1500
+  },
+  "split_sessions": {
+    "train": [
+      "00975a40",
+      "0c09728d",
+      "12146e1e",
+      "23d2fc74",
+      "47df7776",
+      "4c1af894",
+      "53233b15",
+      "60128564",
+      "66c78629",
+      "6e6156a9",
+      "704874c0",
+      "9298d4a7",
+      "93093601",
+      "9e729013",
+      "9ed6e8a4",
+      "a3d7731f",
+      "adcc2a63",
+      "bc8cdd5d",
+      "ce8ffb3d",
+      "dc093c62",
+      "f201633c",
+      "f5dea6a0"
+    ],
+    "val": [
+      "04795eb9",
+      "12b37a51",
+      "1e0fa45b",
+      "30b9512a",
+      "4440714e",
+      "59b5deb3",
+      "5b0ebee6",
+      "66204906",
+      "71d28457",
+      "7423ad8a",
+      "a1e7305c",
+      "cc78f23d",
+      "d11c8328"
+    ],
+    "test": [
+      "074efa27",
+      "2a894dad",
+      "2f6cb1a9",
+      "44a8d2b1",
+      "4a56a531",
+      "50c25a3a",
+      "6719f9a8",
+      "888b8faf",
+      "921bebc9",
+      "9746bae6",
+      "a532bc8c",
+      "cad64713",
+      "cbe96b07"
+    ]
+  },
+  "warnings": []
+}

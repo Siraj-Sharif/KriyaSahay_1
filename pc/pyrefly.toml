@@ -1,0 +1,7 @@
+project-includes = ["src", "tests"]
+project-excludes = ["**/__pycache__", "**/.pytest_cache"]
+
+search-path = ["src"]
+
+python-version = "3.11"
+python-interpreter-path = "../.venv/Scripts/python.exe"

@@ -1,0 +1,73 @@
+# NeuroGrip CV System — Default Configuration
+# All parameters are overridable at runtime via --config CLI flag.
+
+camera:
+  index: 0
+  width: 1280
+  height: 720
+  fps: 30
+  backend: "opencv"
+
+hand_tracking:
+  model_path: "models/mediapipe/hand_landmarker.task"
+  num_hands: 2                        # allow 2 for ambiguity detection
+  min_hand_detection_confidence: 0.6
+  min_hand_presence_confidence: 0.6
+  min_tracking_confidence: 0.5
+
+features:
+  wrist_landmark: 0                   # landmark 0 = WRIST (translation origin)
+  span_landmark: 9                    # landmark 9 = MIDDLE_MCP (scale reference)
+  open_extension_threshold: 0.40
+  open_distance_threshold: 0.40
+  open_cosine_threshold: 0.50
+  closed_extension_threshold: 0.25
+  closed_cosine_threshold: 0.30
+  thumb_lateral_threshold: 0.25      # positive-x displacement for THUMB_ONLY detection
+
+recognition:
+  mode: "ml"                          # "ml" | "rule_based"
+  model_path: "models/NeuroGrip_ExtraTrees_68Features_6100Samples_model.pkl"
+  normal_min_confidence: 0.60
+
+# CALIBRATION: GRAB thresholds — adjust after observing physical robotic hand.
+# These mid-range defaults are placeholders, not engineering specifications.
+grab_calibration:
+  min_extension_ratio: 0.20
+  max_extension_ratio: 0.55
+  min_cosine: 0.10
+  max_cosine: 0.60
+
+stabilization:
+  window_size: 20
+  vote_threshold: 0.70
+  min_frames_required: 5
+
+stop:
+  arm_key: "space"                    # key to arm STOP detection
+  arm_timeout_ms: 5000                # auto-disarm if STOP not triggered within this window
+  min_frames: 3                       # consecutive frames required to trigger STOP
+  min_confidence: 0.85                # classifier confidence threshold for STOP path
+  hold_ms: 1500                       # post-STOP suppression window (ms)
+
+serial:
+  enabled: true
+  port: "COM3"
+  baud_rate: 115200
+  timeout_s: 1.0
+  mock: false                         # true → MockSerialInterface (no hardware needed)
+
+logging:
+  level: "INFO"                       # DEBUG | INFO | WARNING | ERROR
+  file: null                          # null = stdout only; provide path for file logging
+
+visualization:
+  enabled: true
+  window_title: "NeuroGrip CV"
+  show_landmarks: true
+  show_skeleton: true
+  show_fps: true
+  show_confidence: true
+  show_finger_states: true
+  show_raw_prediction: true
+  show_stabilization: true
