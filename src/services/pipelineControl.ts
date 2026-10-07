@@ -26,6 +26,7 @@ export const CONTROL_ACTIONS = {
   VOICE_SET_STATE: "voice.set_state",
   VOICE_TRANSCRIPT: "voice.transcript",
   PIPELINE_SNAPSHOT: "pipeline.snapshot",
+  APP_SHUTDOWN: "app.shutdown",
 } as const;
 
 export type ControlAction = (typeof CONTROL_ACTIONS)[keyof typeof CONTROL_ACTIONS];

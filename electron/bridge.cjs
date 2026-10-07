@@ -28,6 +28,7 @@ const DEFAULT_CONTROL_TIMEOUT_MS = 6000;
  * @param {(state: object) => void} [options.onState]         state snapshot received
  * @param {(msg: object) => void} [options.onFrame]           preview frame received
  * @param {(connected: boolean) => void} [options.onStatus]   pipeline connect/disconnect
+ * @param {(error: Error) => void} [options.onError]         listener/socket errors
  * @param {(result: object) => void} [options.onControlResult] late/unsolicited result
  * @param {(message: string) => void} [options.log]
  */
@@ -43,6 +44,8 @@ function createPipelineBridge(options) {
   let socket = null;
   let buffer = "";
   let seq = 0;
+  let listening = false;
+  let startPromise = null;
   /** id → { resolve, timer } for in-flight control requests. */
   const pending = new Map();
 
@@ -98,6 +101,11 @@ function createPipelineBridge(options) {
   }
 
   function handleConnection(conn) {
+    if (socket && !socket.destroyed) {
+      log("rejected an additional pipeline connection; one owner is allowed");
+      conn.destroy();
+      return;
+    }
     log("pipeline connected");
     // An accepted socket never emits "connect" — report the real state right here, or the
     // UI's backend indicator could never turn on.
@@ -126,22 +134,59 @@ function createPipelineBridge(options) {
   }
 
   function start() {
-    if (server) return;
-    server = net.createServer(handleConnection);
-    server.on("error", (err) => logError(`server error: ${err.message}`));
-    server.listen(port, host, () => log(`listening on ${host}:${port}`));
+    if (listening) return Promise.resolve({ ok: true, port: boundPort() });
+    if (startPromise) return startPromise;
+
+    startPromise = new Promise((resolve, reject) => {
+      server = net.createServer(handleConnection);
+      const currentServer = server;
+      currentServer.on("error", (err) => {
+        logError(`server error: ${err.message}`);
+        if (opts.onError) opts.onError(err);
+        if (!listening && server === currentServer) {
+          server = null;
+          startPromise = null;
+          reject(err);
+        }
+      });
+      currentServer.listen(port, host, () => {
+        listening = true;
+        log(`listening on ${host}:${port}`);
+        resolve({ ok: true, port: boundPort() });
+      });
+    });
+    return startPromise;
   }
 
   function stop() {
+    listening = false;
+    startPromise = null;
     if (server) {
-      server.close();
+      const currentServer = server;
       server = null;
+      try {
+        currentServer.close();
+      } catch {
+        // A server that failed during startup may already be closed.
+      }
     }
     if (socket) {
-      socket.destroy();
+      const currentSocket = socket;
       socket = null;
+      try {
+        currentSocket.destroy();
+      } catch {
+        // Socket teardown is best-effort during application shutdown.
+      }
     }
+    buffer = "";
     failPending("NeuroGrip pipeline disconnected.");
+    notifyStatus(false);
+  }
+
+  /** `true` while the TCP listener is bound. */
+  function isListening() {
+    return Boolean(listening);
   }
 
   /** `true` while a pipeline is connected. */
@@ -186,7 +231,7 @@ function createPipelineBridge(options) {
     return address && typeof address === "object" ? address.port : port;
   }
 
-  return { start, stop, request, isConnected, boundPort, port, host };
+  return { start, stop, request, isConnected, isListening, boundPort, port, host };
 }
 
 module.exports = { createPipelineBridge, DEFAULT_CONTROL_TIMEOUT_MS };

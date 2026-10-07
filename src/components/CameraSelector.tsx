@@ -27,7 +27,7 @@ function KindIcon({ kind, className }: { kind: CameraDevice["kind"]; className?:
 
 /** Camera source dropdown: lists built-in and external webcams and switches the active feed. */
 export function CameraSelector() {
-  const { cameraDevices, selectedCamera, selectCamera, refreshCameras } = useSystem();
+  const { cameraDevices, selectedCamera, selectCamera, refreshCameras, backendControlled } = useSystem();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -103,7 +103,9 @@ export function CameraSelector() {
           </div>
         ))}
         <p className="px-2.5 pb-1.5 pt-1 text-[10px] leading-snug text-slate-600">
-          Built-in vs external is inferred from the device name. Camera names appear after you allow camera access.
+          {backendControlled
+            ? "Indices come from Python OpenCV discovery. Selection changes the camera owned by the live pipeline."
+            : "Browser camera names are not connected to the simulated CV preview and will not be used for capture."}
         </p>
       </Popover>
     </div>

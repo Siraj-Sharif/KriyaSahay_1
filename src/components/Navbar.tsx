@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { Icon, StatusDot } from "./ui";
 import { cn } from "../utils/cn";
-import { useSystem } from "../services/SystemContext";
 import { usePipelineState } from "../hooks/usePipelineState";
+import { useDesktopRuntime } from "../hooks/useDesktopRuntime";
 
 export type Tab = "dashboard" | "gestures" | "hardware" | "voice";
 
@@ -25,20 +24,18 @@ export function Navbar({
   isFullscreen: boolean;
   onToggleFullscreen: () => void;
 }) {
-  const { frame, serial } = useSystem();
   const pipelineState = usePipelineState();
-  const [bridgeConnected, setBridgeConnected] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && (window as any).neurogrip?.onBridgeStatus) {
-      const unsub = (window as any).neurogrip.onBridgeStatus((s: { connected: boolean }) => {
-        setBridgeConnected(Boolean(s && s.connected));
-      });
-      return () => unsub();
-    }
-  }, []);
-
-  const isBackendActive = bridgeConnected || pipelineState.fps > 0 || pipelineState.pipelineState !== "STARTING";
+  const runtime = useDesktopRuntime();
+  const isDesktop = Boolean(window.neurogrip?.isDesktop);
+  const backendReady = isDesktop && runtime?.backend === "ready";
+  const backendStatus = !isDesktop ? "busy" : backendReady ? "ok" : runtime?.backend === "error" || runtime?.backend === "stopped" ? "off" : "busy";
+  const backendLabel = !isDesktop
+    ? "Browser demo"
+    : backendReady
+      ? "Pipeline ready"
+      : runtime?.backend === "error" || runtime?.backend === "stopped"
+        ? "Backend error"
+        : "Starting Python…";
   return (
     <header className="relative z-40 shrink-0 border-b border-white/5 bg-black/40 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1700px] items-center justify-between gap-4 px-4 py-3 sm:px-6">
@@ -49,9 +46,9 @@ export function Navbar({
           </div>
           <div className="leading-tight">
             <div className="text-sm font-semibold tracking-wide text-white">
-              Neuro<span className="text-cyan-300">Grip</span>
+              Kriya <span className="text-cyan-300">Sahay</span>
             </div>
-            <div className="mono text-[10px] uppercase tracking-[0.25em] text-slate-500">Robotic Hand Control</div>
+            <div className="mono text-[10px] uppercase tracking-[0.25em] text-slate-500">Robotics Control System</div>
           </div>
         </div>
 
@@ -80,25 +77,32 @@ export function Navbar({
 
         <div className="flex items-center gap-4">
           <div className="hidden items-center gap-3 lg:flex">
-            <StatusDot
-              status={isBackendActive ? "ok" : "off"}
-              label={isBackendActive ? "Backend Live" : "Connecting..."}
-            />
-            <StatusDot
-              status={pipelineState.handDetected ? "ok" : pipelineState.cameraStatus === "connected" ? "warn" : "off"}
-              label={pipelineState.handDetected ? (pipelineState.gesture || "Tracking") : pipelineState.cameraStatus === "connected" ? "No Hand" : "Camera Off"}
-            />
-            {/* Serial indicator from the pipeline's own `serial_info`, not a string guess. */}
-            <StatusDot
-              status={!pipelineState.serialConnected ? "off" : pipelineState.serialMode === "real" ? "ok" : "busy"}
-              label={
-                !pipelineState.serialConnected
-                  ? "Serial Off"
-                  : pipelineState.serialMode === "real"
-                    ? pipelineState.serialPort
-                    : "Mock Serial"
-              }
-            />
+            <StatusDot status={backendStatus} label={backendLabel} />
+            {!isDesktop ? (
+              <StatusDot status="busy" label="Simulated CV" />
+            ) : (
+              <StatusDot
+                status={!backendReady ? "busy" : pipelineState.cameraStatus === "connected" ? (pipelineState.handDetected ? "ok" : "warn") : "off"}
+                label={!backendReady ? "Camera pending" : pipelineState.cameraStatus === "connected" ? (pipelineState.handDetected ? "Tracking" : "No hand") : pipelineState.cameraStatus === "stopped" ? "Camera paused" : "Camera unavailable"}
+              />
+            )}
+            {/* Serial status comes from the Python pipeline; browser adapters are never shown as real hardware. */}
+            {!isDesktop ? (
+              <StatusDot status="busy" label="No hardware · demo" />
+            ) : (
+              <StatusDot
+                status={!backendReady ? "busy" : !pipelineState.serialConnected ? "off" : pipelineState.serialMode === "real" ? "ok" : "busy"}
+                label={
+                  !backendReady
+                    ? "Serial pending"
+                    : !pipelineState.serialConnected
+                      ? "Serial disconnected"
+                      : pipelineState.serialMode === "real"
+                        ? pipelineState.serialPort
+                        : "Mock serial"
+                }
+              />
+            )}
           </div>
           <button
             onClick={onToggleFullscreen}

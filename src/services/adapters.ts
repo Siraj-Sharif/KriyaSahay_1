@@ -150,7 +150,7 @@ export function createMockVision(): VisionAdapter {
         handDetected: detected,
         handCount: detected ? 1 : 0,
         handedness: detected ? "Right" : null,
-        model: "MediaPipe Hands → NeuroGrip MLP v2",
+        model: "Simulated browser preview",
         landmarks: detected ? landmarksForPose(pose as FingerPose, 0.006) : [],
       };
       listeners.forEach((l) => l(frame));
@@ -193,7 +193,7 @@ export function createMockSerial(): SerialAdapter {
   const listeners = new Set<(s: SerialState) => void>();
   let state: SerialState = {
     connected: true,
-    port: "COM3",
+    port: "SIMULATED",
     baudRate: 115200,
     tx: "idle",
     lastCommand: encodeCommand("STOP"),
@@ -238,12 +238,12 @@ export function createMockSerial(): SerialAdapter {
 /* ------------------------------------------------------------------ */
 
 const VOICE_SCRIPTS: { heard: string; reply: string; command?: Gesture }[] = [
-  { heard: "NeuroGrip, close the hand.", reply: "Closing the hand. Sending CLOSED_FIST to actuator bus.", command: "CLOSED_FIST" },
-  { heard: "Grip the object.", reply: "Engaging adaptive grasp. GRIP command transmitted.", command: "GRIP" },
-  { heard: "Open the hand and stop.", reply: "Releasing all actuators. STOP pose active.", command: "STOP" },
-  { heard: "Give me a thumbs up.", reply: "Acknowledged. THUMBS_UP pose dispatched.", command: "THUMBS_UP" },
-  { heard: "What's the system status?", reply: "All systems nominal. Serial link on COM3 at 115200 baud, vision pipeline running at 30 frames per second." },
-  { heard: "Show me the OK sign.", reply: "Executing precision OK gesture.", command: "OK" },
+  { heard: "Kriya Sahay, close the hand.", reply: "Browser demo: CLOSED_FIST preview only. No robot hardware is connected.", command: "CLOSED_FIST" },
+  { heard: "Grip the object.", reply: "Browser demo: GRIP preview only. No serial command was sent.", command: "GRIP" },
+  { heard: "Open the hand and stop.", reply: "Browser demo: STOP pose preview only. No robot hardware is connected.", command: "STOP" },
+  { heard: "Give me a thumbs up.", reply: "Browser demo: THUMBS_UP preview only. No serial command was sent.", command: "THUMBS_UP" },
+  { heard: "What's the system status?", reply: "Browser demo only. No physical camera, serial link or Python backend is connected." },
+  { heard: "Show me the OK sign.", reply: "Browser demo: OK pose preview only. No robot hardware is connected.", command: "OK" },
 ];
 
 export function createMockVoice(onCommand?: (g: Gesture | null) => void): VoiceAdapter {
@@ -253,7 +253,7 @@ export function createMockVoice(onCommand?: (g: Gesture | null) => void): VoiceA
     {
       id: "m0",
       role: "assistant",
-      text: "NeuroGrip voice interface online. Tap the microphone and speak a command.",
+      text: "Kriya Sahay browser demo voice. Replies and poses are simulated; no hardware is connected.",
       timestamp: Date.now(),
     },
   ];

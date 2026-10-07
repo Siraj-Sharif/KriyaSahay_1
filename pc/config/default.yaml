@@ -51,11 +51,11 @@ stop:
   hold_ms: 1500                       # post-STOP suppression window (ms)
 
 serial:
-  enabled: true
-  port: "COM3"
+  enabled: false                     # connect explicitly from the desktop hardware panel
+  port: ""                           # discovered and selected at runtime; never assume COM3
   baud_rate: 115200
   timeout_s: 1.0
-  mock: false                         # true → MockSerialInterface (no hardware needed)
+  mock: false                         # true → MockSerialInterface (tests only)
 
 logging:
   level: "INFO"                       # DEBUG | INFO | WARNING | ERROR

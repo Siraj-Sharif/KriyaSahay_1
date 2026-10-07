@@ -10,17 +10,18 @@ import { SystemProvider, useSystem } from "./services/SystemContext";
 
 function Footer({ compact }: { compact?: boolean }) {
   const { frame, serial } = useSystem();
+  const isDesktop = Boolean(window.neurogrip?.isDesktop);
   return (
     <footer className={compact ? "shrink-0 border-t border-white/5 py-2" : "mt-8 border-t border-white/5 py-4"}>
       <div className="mx-auto flex max-w-[1700px] flex-wrap items-center justify-between gap-3 px-4 sm:px-6">
         <div className="mono flex flex-wrap items-center gap-x-5 gap-y-1 text-[10px] uppercase tracking-[0.2em] text-slate-500">
-          <span>NeuroGrip v1.0</span>
+          <span>Kriya Sahay v1.0</span>
           <span>CMD <span className="text-cyan-300">{frame?.handDetected ? frame.gesture : "—"}</span></span>
           <span>FPS <span className="text-slate-300">{frame?.fps ?? "--"}</span></span>
           <span>LAT <span className="text-slate-300">{frame?.latencyMs ?? "--"}ms</span></span>
-          <span>TX <span className="text-slate-300">{serial?.lastCommand ?? "--"}</span></span>
+          <span>{isDesktop ? "TX" : "SIM TX"} <span className="text-slate-300">{serial?.lastCommand ?? "--"}</span></span>
         </div>
-        <span className="mono text-[10px] text-slate-600">ESP32 · PCA9685 · MediaPipe · Press F11 for fullscreen</span>
+        <span className="mono text-[10px] text-slate-600">{isDesktop ? "NG1 protocol · board telemetry unavailable · Press F11 for fullscreen" : "Browser simulation only · no hardware writes · Press F11 for fullscreen"}</span>
       </div>
     </footer>
   );

@@ -29,7 +29,9 @@ def register_pipeline_controls(pipeline: "NeuroGripPipeline") -> None:
     # ── Camera ────────────────────────────────────────────────────────
 
     def _camera_list(payload: dict[str, Any]):
-        cameras = pipeline.list_cameras()
+        # Match the OpenCV camera abstraction's existing 0–9 fallback scan while keeping
+        # discovery inside the process that owns the active capture device.
+        cameras = pipeline.list_cameras(probe_limit=10)
         return ok({"cameras": cameras, "active": pipeline.camera_info["index"]})
 
     def _camera_select(payload: dict[str, Any]):
@@ -107,7 +109,7 @@ def register_pipeline_controls(pipeline: "NeuroGripPipeline") -> None:
             return fail(error or "voice command failed", data)
         return ok(data)
 
-    # ── Introspection ─────────────────────────────────────────────────
+    # ── Introspection / lifecycle ────────────────────────────────────
 
     def _snapshot(payload: dict[str, Any]):
         return ok(
@@ -117,11 +119,18 @@ def register_pipeline_controls(pipeline: "NeuroGripPipeline") -> None:
                 "voice": pipeline.voice_info,
                 "running": pipeline.is_running,
                 "initialized": pipeline.is_initialized,
+                "cv_ready": bool(getattr(pipeline.detector, "is_initialized", False)),
                 "stop_armed": pipeline.is_stop_armed,
                 "state": pipeline.state.name,
                 "runtime": pipeline.runtime_info(),
             }
         )
+
+    def _app_shutdown(payload: dict[str, Any]):
+        # The control reader acknowledges on this same socket; the pipeline loop then exits
+        # through its existing finally/shutdown path, releasing camera and serial handles.
+        pipeline.stop()
+        return ok({"state": "SHUTTING_DOWN"})
 
     bridge.register_control_handler(Action.CAMERA_LIST, _camera_list)
     bridge.register_control_handler(Action.CAMERA_SELECT, _camera_select)
@@ -134,5 +143,6 @@ def register_pipeline_controls(pipeline: "NeuroGripPipeline") -> None:
     bridge.register_control_handler(Action.VOICE_SET_STATE, _voice_set_state)
     bridge.register_control_handler(Action.VOICE_TRANSCRIPT, _voice_transcript)
     bridge.register_control_handler(Action.PIPELINE_SNAPSHOT, _snapshot)
+    bridge.register_control_handler(Action.APP_SHUTDOWN, _app_shutdown)
 
     logger.info("Registered %d pipeline control actions: %s", len(bridge.dispatcher.registered_actions), ", ".join(bridge.dispatcher.registered_actions))

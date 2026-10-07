@@ -9,7 +9,7 @@ const dist = path.join(root, "dist", "index.html");
 const out = path.join(__dirname, "..", "renderer");
 
 if (process.argv.includes("--build") || !fs.existsSync(dist)) {
-  console.log("› Building the NeuroGrip UI…");
+  console.log("› Building the Kriya Sahay UI…");
   execSync("npm run build", { cwd: root, stdio: "inherit", shell: true });
 }
 if (!fs.existsSync(dist)) {

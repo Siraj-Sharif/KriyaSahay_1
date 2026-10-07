@@ -82,8 +82,11 @@ export function VoiceAssistant() {
     logRef.current?.scrollTo({ top: logRef.current.scrollHeight, behavior: "smooth" });
   }, [messages.length]);
 
-  // leaving the tab silences any reply that is still playing
-  useEffect(() => () => cancelSpeech(), []);
+  // Leaving the voice tab releases microphone/audio capture and cancels any reply in flight.
+  useEffect(() => () => {
+    voice.stopListening();
+    cancelSpeech();
+  }, [voice]);
 
   const active = state !== "idle";
   const onMic = () => (active ? voice.stopListening() : voice.startListening());
@@ -105,7 +108,7 @@ export function VoiceAssistant() {
   const testVoice = async () => {
     const mine = ++replayToken.current;
     setReplayId("test");
-    await speakText("NeuroGrip voice output is working. You should hear this reply.", () => mine === replayToken.current, true);
+    await speakText("Kriya Sahay voice output is working. You should hear this reply.", () => mine === replayToken.current, true);
     if (mine === replayToken.current) setReplayId(null);
   };
 
@@ -237,7 +240,7 @@ export function VoiceAssistant() {
         <Corner />
         <div className="absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
         <div className="absolute left-5 top-4 z-10">
-          <div className="mono text-[9px] uppercase tracking-[0.3em] text-slate-500">NeuroGrip Assistant</div>
+          <div className="mono text-[9px] uppercase tracking-[0.3em] text-slate-500">Kriya Sahay Assistant</div>
           <AnimatePresence mode="wait">
             <motion.div key={state} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }}>
               <div className="text-lg font-semibold text-white">{STATE_COPY[state].title}</div>

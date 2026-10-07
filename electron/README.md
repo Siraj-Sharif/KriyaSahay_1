@@ -1,48 +1,44 @@
-# NeuroGrip Desktop
+# Kriya Sahay Desktop
 
-Runs the NeuroGrip UI as a Windows desktop app with a fully on-device voice assistant
-(Whisper speech recognition + your OS voices). No internet is needed once the model is on disk.
+Kriya Sahay is an Electron robotics-control dashboard with a supervised Python CV backend and an optional on-device voice assistant. Python remains the single owner of the camera, CV pipeline, safety state, command validation and serial interface.
 
-## One-time setup (on your Windows laptop)
+## One-time setup (Windows)
 
 ```bash
-# 1. in the project root
+# From the repository root
 npm install
 
-# 2. in this folder
+# In electron/
 cd electron
 npm install
 ```
 
-## Run it
+Install the Python dependencies in a virtual environment at the repository root or under `pc/`. Electron checks `NEUROGRIP_PYTHON`, `VIRTUAL_ENV`, `.venv`, then falls back to the system Python executable. The Python package must be available from `pc/src`.
+
+## Run
 
 ```bash
 cd electron
-npm start          # builds the UI, then opens the desktop app
+npm start
 ```
 
-First launch: the voice model (~75 MB) downloads once and is cached on your PC.
-The Voice tab shows the progress. After that it works offline.
+Electron starts one Python process, waits for the existing TCP bridge and confirms the pipeline snapshot before reporting the backend ready. Closing the desktop app requests orderly Python shutdown and releases devices; the Hardware view is where a discovered serial port can be selected and connected. No COM port or camera index is assumed to be the only available device.
 
-## Make it 100 % offline from the very first launch
+The voice model is optional. On first use it can download once and is cached on the PC; model loading is shared between startup warm-up and transcription. The Voice tab reports microphone permission and model availability.
+
+## Optional: prefetch the voice model
 
 ```bash
-npm run prefetch-model   # downloads the model into electron/models
-npm start                # now uses the bundled copy, never touches the network
+npm run prefetch-model
+npm start
 ```
 
-## Build an installer (.exe)
+## Build an installer
 
 ```bash
-npm run dist             # → electron/release/  (installer + portable .exe)
+npm run dist
 ```
-This bundles the model inside the installer.
 
-## How the voice assistant works here
+## Safety and device reporting
 
-mic you selected → records until you pause → Whisper (runs locally) → command parser → hand + serial → spoken reply
-
-- Works with any microphone Windows lists: laptop array, USB, Bluetooth, headset, audio interface.
-- Needs *Windows Settings → Privacy & security → Microphone → "Let desktop apps access your microphone"* turned on.
-- Change the model with an environment variable, e.g. `NEUROGRIP_STT_MODEL=Xenova/whisper-small.en`
-  (more accurate, slower). Run `npm run prefetch-model` again after changing it.
+The current NG1 serial protocol does not identify the downstream board or report servo-driver/actuator state. The dashboard therefore reports an open serial link and actual writes only; it does not infer that an ESP32, PCA9685 or servo is present from a port alone. Browser preview mode is explicitly simulated and cannot send commands to hardware.

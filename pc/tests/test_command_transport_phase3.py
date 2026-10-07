@@ -4,7 +4,7 @@ tests/test_command_transport_phase3.py
 Phase 3 Command Protocol & Transport Integration Test Suite.
 
 Verifies:
-  A. Protocol encoding (14 locked canonical commands -> b"NG1|<CMD>\n")
+  A. Protocol encoding (13 locked canonical commands -> b"NG1|<CMD>\n")
   B. NO_COMMAND suppression (zero writes)
   C. Invalid command suppression (zero writes for UNKNOWN, INVALID, one, peace, etc.)
   D. Mock transport recording (exact NG1|<CMD>\n frame recorded)
@@ -39,9 +39,9 @@ from neurogrip.stabilization.temporal import StabilizerState, TemporalStabilizer
 # A. Protocol Encoding Tests
 # ─────────────────────────────────────────────────────────
 
-def test_protocol_encoding_all_14_canonical_commands():
-    """Verify all 14 canonical commands format correctly into b'NG1|<CMD>\\n'."""
-    assert len(NEUROGRIP_TAXONOMY) == 14
+def test_protocol_encoding_all_13_canonical_commands():
+    """Verify all 13 canonical commands format correctly into b'NG1|<CMD>\\n'."""
+    assert len(NEUROGRIP_TAXONOMY) == 13
     for cmd in NEUROGRIP_TAXONOMY:
         encoded_bytes = ProtocolEncoder.encode_command(cmd)
         encoded_str = ProtocolEncoder.encode_command_string(cmd)

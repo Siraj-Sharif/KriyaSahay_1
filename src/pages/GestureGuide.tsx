@@ -30,7 +30,7 @@ export function GestureGuide() {
         <div className="mb-4 flex items-end justify-between">
           <div>
             <h2 className="text-xl font-semibold text-white">Gesture Command Set</h2>
-            <p className="text-sm text-slate-400">13 trained gestures recognised by the NeuroGrip classifier. Click a card to preview it on the 3D hand.</p>
+            <p className="text-sm text-slate-400">13 gestures supported by the CV pipeline. Click a card to send a manual command or preview it in browser demo mode.</p>
           </div>
           <span className="mono text-[10px] uppercase tracking-[0.25em] text-slate-500">{GESTURE_LIST.length} commands</span>
         </div>

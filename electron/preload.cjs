@@ -17,7 +17,15 @@ contextBridge.exposeInMainWorld("neurogrip", {
       return () => ipcRenderer.removeListener("stt:status", handler);
     },
   },
-  // Serial control handlers
+  /** Current truthful Electron / Python readiness snapshot. */
+  getRuntimeStatus: () => ipcRenderer.invoke("neurogrip:runtime-status"),
+  restartBackend: () => ipcRenderer.invoke("neurogrip:backend-restart"),
+  onRuntimeStatus: (cb) => {
+    const handler = (_e, status) => cb(status);
+    ipcRenderer.on("neurogrip:runtime-status", handler);
+    return () => ipcRenderer.removeListener("neurogrip:runtime-status", handler);
+  },
+  // Serial compatibility handlers (all delegate to the pipeline control channel).
   serialPorts: () => ipcRenderer.invoke("serial:ports"),
   serialConnect: (port, baud) => ipcRenderer.invoke("serial:connect", port, baud),
   serialDisconnect: () => ipcRenderer.invoke("serial:disconnect"),
