@@ -75,7 +75,8 @@ export function createLocalWhisperVoice({ onCommand, getStatus, interpret }: Opt
 
   // engine status from the desktop side
   stt.onStatus(setEngine);
-  void stt.getStatus().then(setEngine);
+  // The Electron main-process supervisor may already be warming this same cached model;
+  // warmup() shares that single promise and reports its real state without reloading it.
   void stt.warmup().then(setEngine);
 
   // processing "pulse" level while Whisper works
@@ -102,7 +103,6 @@ export function createLocalWhisperVoice({ onCommand, getStatus, interpret }: Opt
     push("user", heard);
     setState("processing");
     startPulse();
-    await new Promise((r) => setTimeout(r, 150));
     if (mySession !== session) return;
 
     // 1. The running pipeline interprets the transcript, validates the command and

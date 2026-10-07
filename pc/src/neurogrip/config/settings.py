@@ -90,7 +90,7 @@ class StopConfig:
 @dataclass
 class SerialConfig:
     enabled: bool = True
-    port: str = "COM3"
+    port: str = ""
     baud_rate: int = 115200
     timeout_s: float = 1.0
     mock: bool = False

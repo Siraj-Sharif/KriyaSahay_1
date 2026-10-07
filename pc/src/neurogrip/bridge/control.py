@@ -56,15 +56,16 @@ class Action:
     VOICE_SET_STATE = "voice.set_state"
     VOICE_TRANSCRIPT = "voice.transcript"
 
-    # Introspection
+    # Introspection / lifecycle
     PIPELINE_SNAPSHOT = "pipeline.snapshot"
+    APP_SHUTDOWN = "app.shutdown"
 
     ALL = (
         CAMERA_LIST, CAMERA_SELECT, CAMERA_SET_ENABLED,
         SERIAL_LIST_PORTS, SERIAL_CONNECT, SERIAL_DISCONNECT,
         COMMAND_SEND, STOP_SET_ARMED,
         VOICE_SET_STATE, VOICE_TRANSCRIPT,
-        PIPELINE_SNAPSHOT,
+        PIPELINE_SNAPSHOT, APP_SHUTDOWN,
     )
 
 

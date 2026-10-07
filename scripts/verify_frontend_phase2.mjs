@@ -173,7 +173,7 @@ check(
     control.ALL_CONTROL_ACTIONS.every((a) => a.includes(".")),
   control.ALL_CONTROL_ACTIONS.join(", "),
 );
-check("11 control actions are exposed", control.ALL_CONTROL_ACTIONS.length === 11, String(control.ALL_CONTROL_ACTIONS.length));
+check("12 control actions are exposed", control.ALL_CONTROL_ACTIONS.length === 12, String(control.ALL_CONTROL_ACTIONS.length));
 
 await control.selectCamera(1);
 check("camera.select sends its payload", ipc.controlCalls.at(-1).action === "camera.select" && ipc.controlCalls.at(-1).payload.index === 1);

@@ -1,5 +1,42 @@
 import type { EngineStatus } from "../services/types";
 
+export interface DesktopPipelineSnapshot {
+  initialized: boolean;
+  running: boolean;
+  cv_ready: boolean;
+  stop_armed: boolean;
+  state: string;
+  camera?: {
+    index: number;
+    enabled: boolean;
+    opened: boolean;
+    state: string;
+    backend: string;
+    resolution: string;
+    target_resolution: string;
+    error: string | null;
+  };
+  serial?: {
+    mode: "real" | "mock" | "disabled";
+    port: string;
+    baud: number;
+    connected: boolean;
+    state: string;
+    frames_sent: number;
+    last_tx: string;
+  };
+  voice?: Record<string, unknown>;
+}
+
+export interface DesktopRuntimeStatus {
+  bridge: "starting" | "listening" | "connected" | "disconnected" | "error";
+  backend: "starting" | "ready" | "stopping" | "stopped" | "error";
+  cv: "starting" | "ready" | "degraded" | "error";
+  message: string;
+  pid?: number | null;
+  snapshot?: DesktopPipelineSnapshot | null;
+}
+
 /** Bridge exposed by electron/preload.cjs. Undefined when running in a normal browser. */
 export interface NeuroGripBridge {
   isDesktop: true;
@@ -11,6 +48,9 @@ export interface NeuroGripBridge {
     onStatus(cb: (s: EngineStatus) => void): () => void;
   };
   onPipelineState(cb: (s: Record<string, unknown>) => void): () => void;
+  getRuntimeStatus(): Promise<DesktopRuntimeStatus>;
+  restartBackend(): Promise<{ ok: boolean; error?: string }>;
+  onRuntimeStatus(cb: (status: DesktopRuntimeStatus) => void): () => void;
   /**
    * Phase 2 control channel: acts on the *running* Python pipeline (camera, serial,
    * commands, STOP, voice). Never opens a second process or serial port.

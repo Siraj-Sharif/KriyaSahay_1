@@ -2,8 +2,8 @@
   "name": "neurogrip-desktop",
   "version": "1.0.0",
   "private": true,
-  "description": "NeuroGrip — AI robotic hand control (desktop)",
-  "author": "NeuroGrip",
+  "description": "Kriya Sahay — robotics control dashboard (desktop)",
+  "author": "Kriya Sahay",
   "main": "main.cjs",
   "scripts": {
     "start": "node scripts/prepare.cjs --build && electron .",
@@ -19,8 +19,8 @@
     "electron-builder": "^26.15.3"
   },
   "build": {
-    "appId": "com.neurogrip.app",
-    "productName": "NeuroGrip",
+    "appId": "com.kriyasahay.desktop",
+    "productName": "Kriya Sahay",
     "directories": {
       "output": "release"
     },

@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { RoboticHand } from "../components/3D/RoboticHand";
 import { CameraPanel } from "../components/CameraPanel";
+import { SystemOverview } from "../components/SystemOverview";
 import { TelemetryPanel } from "../components/TelemetryPanel";
 import { ConfidenceChart } from "../components/charts/ConfidenceChart";
 import { Corner, GlassCard, Icon } from "../components/ui";
@@ -14,7 +15,7 @@ import { cn } from "../utils/cn";
 const FINGER_NAMES = ["Thumb", "Index", "Middle", "Ring", "Pinky"];
 
 export function Dashboard() {
-  const { frame, frameRef, overrideGesture, setOverrideGesture } = useSystem();
+  const { overrideGesture, setOverrideGesture } = useSystem();
   const pipelineState = usePipelineState();
   const history = useConfidenceHistory();
   const gestureCounts = useGestureCounts();
@@ -45,6 +46,8 @@ export function Dashboard() {
 
   return (
     <div className="flex flex-col gap-5">
+      <SystemOverview />
+
       {/* Primary split */}
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-5">
         <GlassCard className="lg:col-span-3" strong>

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { camerasFrom, isPipelineControlAvailable, listCameras } from "../services/pipelineControl";
+import { useDesktopRuntime } from "./useDesktopRuntime";
 
 export interface CameraDevice {
   id: string;
@@ -44,7 +45,8 @@ const SIMULATED: CameraDevice[] = [
 
 export function useCameraDevices() {
   const backendControlled = isPipelineControlAvailable();
-  const [devices, setDevices] = useState<CameraDevice[]>(SIMULATED);
+  const runtime = useDesktopRuntime();
+  const [devices, setDevices] = useState<CameraDevice[]>(() => backendControlled ? [] : SIMULATED);
   const [selectedId, setSelectedIdState] = useState<string>(() => localStorage.getItem(STORAGE_KEY) ?? "");
 
   const refresh = useCallback(async () => {
@@ -69,12 +71,17 @@ export function useCameraDevices() {
   }, [backendControlled]);
 
   useEffect(() => {
+    if (backendControlled) {
+      // Wait until Electron confirms the Python pipeline is ready; don't offer fallback
+      // cameras or issue discovery requests against a backend that is still starting.
+      if (runtime?.backend === "ready") void refresh();
+      return;
+    }
     void refresh();
-    if (backendControlled) return;
     const md = navigator.mediaDevices;
     md?.addEventListener?.("devicechange", refresh);
     return () => md?.removeEventListener?.("devicechange", refresh);
-  }, [refresh, backendControlled]);
+  }, [refresh, backendControlled, runtime?.backend]);
 
   // fall back to the first device if the stored one is missing
   const selected: CameraDevice =

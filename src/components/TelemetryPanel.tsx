@@ -25,7 +25,6 @@ export function TelemetryPanel() {
     handCount,
     handedness,
     pipelineState,
-    modelUsed,
     routingStr,
     safetyStatus,
     transportStatus,
@@ -37,7 +36,6 @@ export function TelemetryPanel() {
     landmarksCount,
     message,
     isStopActive,
-    isAmbiguous,
   } = usePipelineState();
 
   return (

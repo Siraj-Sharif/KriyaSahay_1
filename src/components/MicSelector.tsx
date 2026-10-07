@@ -159,7 +159,7 @@ export function MicSelector({ devices, selected, onSelect, onRescan, needsPermis
         <div className="rounded-lg bg-rose-500/10 px-3 py-2 text-[11px] leading-snug text-rose-200 ring-1 ring-rose-400/30">
           Microphone access is <b>blocked</b>.{" "}
           {desktop ? (
-            <>Open Windows <i>Settings → Privacy &amp; security → Microphone</i> and turn on <b>“Let desktop apps access your microphone”</b>, then restart NeuroGrip.</>
+            <>Open Windows <i>Settings → Privacy &amp; security → Microphone</i> and turn on <b>“Let desktop apps access your microphone”</b>, then restart Kriya Sahay.</>
           ) : (
             <>Click the lock icon in the address bar → allow Microphone, then press Rescan.</>
           )}

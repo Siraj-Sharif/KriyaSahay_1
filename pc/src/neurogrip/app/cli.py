@@ -10,10 +10,13 @@ from __future__ import annotations
 
 import argparse
 import logging
+import time
 from pathlib import Path
 from typing import Sequence
 
 from neurogrip.app.pipeline import NeuroGripPipeline
+from neurogrip.app.optional_camera import OptionalStartupCamera
+from neurogrip.camera.opencv_camera import OpenCVCamera
 from neurogrip.config.settings import AppConfig, configure_logging
 from neurogrip.visualization.overlay import OverlayWindow
 
@@ -29,8 +32,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--camera",
         type=int,
-        default=0,
-        help="Webcam device index (default: 0).",
+        default=None,
+        help="Optional preferred webcam device index (otherwise use the configured/discovered camera).",
+    )
+    parser.add_argument(
+        "--desktop",
+        action="store_true",
+        help="Run as the Electron-managed desktop backend; continue if no camera is connected.",
     )
     parser.add_argument(
         "--config",
@@ -77,7 +85,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 def _load_config(
     config_path: Path | None,
-    camera_idx: int = 0,
+    camera_idx: int | None = None,
     serial_port: str | None = None,
     baudrate: int | None = None,
     serial_mode: str | None = None,
@@ -88,7 +96,8 @@ def _load_config(
         cfg = AppConfig.default()
     else:
         cfg = AppConfig.from_yaml(config_path)
-    cfg.camera.index = camera_idx
+    if camera_idx is not None:
+        cfg.camera.index = camera_idx
 
     if serial_port is not None:
         cfg.serial.port = serial_port
@@ -109,7 +118,13 @@ def _load_config(
 
 
 
-def run(config: AppConfig, *, no_gui: bool = False, use_gui: bool = False) -> int:
+def run(
+    config: AppConfig,
+    *,
+    no_gui: bool = False,
+    use_gui: bool = False,
+    desktop_mode: bool = False,
+) -> int:
     """
     Run the NeuroGrip application using an already-loaded configuration.
 
@@ -132,17 +147,26 @@ def run(config: AppConfig, *, no_gui: bool = False, use_gui: bool = False) -> in
             visualization=dataclasses.replace(config.visualization, enabled=False),
         )
 
-    pipeline = NeuroGripPipeline(config=config)
+    desktop_camera = None
+    if desktop_mode and config.camera.backend != "mock":
+        # A thin app-boundary wrapper delegates every actual capture operation to the
+        # existing OpenCVCamera. Only a missing first device is non-fatal in desktop mode.
+        desktop_camera = OptionalStartupCamera(OpenCVCamera(config.camera))
+
+    pipeline = NeuroGripPipeline(config=config, camera=desktop_camera) if desktop_camera is not None else NeuroGripPipeline(config=config)
     overlay = OverlayWindow(config.visualization) if config.visualization.enabled else None
 
     def on_frame(frame_container, rendered, state) -> None:
-        # rendered is intentionally available from the pipeline for headless
-        # consumers. GUI display is the only responsibility of this callback.
-        if overlay is None:
-            return
-
+        # Do not busy-spin if the physical camera is absent/off. This only applies to
+        # missing frames; normal camera/CV processing cadence is unchanged.
         frame = frame_container.frame
         if frame is None:
+            if desktop_mode:
+                time.sleep(0.06)
+            return
+
+        # Rendered-frame display is the only GUI responsibility of this callback.
+        if overlay is None:
             return
 
         key = overlay.show(frame, state)
@@ -157,6 +181,20 @@ def run(config: AppConfig, *, no_gui: bool = False, use_gui: bool = False) -> in
         if not pipeline.initialize():
             logger.error("NeuroGrip initialization failed.")
             return 1
+
+        if desktop_mode and not bool(getattr(pipeline.detector, "is_initialized", False)):
+            # initialize() intentionally keeps non-CV controls alive after a missing
+            # MediaPipe model warning. Do not enter run_loop(), where detect() would retry
+            # the same failing model open on every camera frame and terminate the process.
+            # Pause capture, keep the one control bridge responsive for serial/voice/manual
+            # commands, and let the operator retry after fixing the model installation.
+            logger.error("[CV] Hand detector is unavailable; camera tracking is disabled until the model is installed.")
+            pipeline.set_camera_enabled(False)
+            while pipeline.is_running:
+                time.sleep(0.1)
+            # Let the control reader acknowledge app.shutdown before releasing its socket.
+            time.sleep(0.05)
+            return 0
 
         logger.info("NeuroGrip ready. Press Q or ESC to exit.")
         if config.stop.arm_key.lower() == "space" and overlay is not None:
@@ -193,7 +231,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         serial_disabled=args.serial_disabled,
     )
     configure_logging(config.logging)
-    return run(config, no_gui=args.no_gui, use_gui=getattr(args, "gui", False))
+    return run(
+        config,
+        no_gui=args.no_gui,
+        use_gui=getattr(args, "gui", False),
+        desktop_mode=args.desktop,
+    )
 
 
 

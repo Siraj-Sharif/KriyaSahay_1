@@ -111,7 +111,6 @@ export function createWebSpeechVoice({ onCommand, getStatus }: Options): VoiceAd
     push("user", heard);
     interim = "";
     setState("processing");
-    await new Promise((r) => setTimeout(r, 350));
     if (mySession !== session) return;
 
     const intent = parseIntent(heard);

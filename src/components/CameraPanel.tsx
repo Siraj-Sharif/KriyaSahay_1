@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { usePipelineState } from "../hooks/usePipelineState";
+import { useDesktopRuntime } from "../hooks/useDesktopRuntime";
 import { HAND_CONNECTIONS, GESTURE_DEFS } from "../services/gestures";
 import { Corner, Icon, StatusDot } from "./ui";
 
@@ -11,17 +12,17 @@ import { Corner, Icon, StatusDot } from "./ui";
  */
 export function CameraPanel() {
   const pipelineState = usePipelineState();
+  const runtime = useDesktopRuntime();
+  const isDesktop = Boolean(window.neurogrip?.isDesktop);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [hasFrame, setHasFrame] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-  const frameDataRef = useRef<string | null>(null);
 
   // Receive real camera frames from Python pipeline via Electron bridge
   useEffect(() => {
     if (typeof window === "undefined" || !(window as any).neurogrip?.onCameraFrame) return;
     const unsub = (window as any).neurogrip.onCameraFrame((msg: { data: string }) => {
       if (msg && msg.data) {
-        frameDataRef.current = msg.data;
         if (imgRef.current) {
           imgRef.current.src = "data:image/jpeg;base64," + msg.data;
         }
@@ -109,7 +110,41 @@ export function CameraPanel() {
 
   const detected = pipelineState.handDetected;
   const def = detected ? GESTURE_DEFS[pipelineState.gesture] : null;
-  const cameraOn = pipelineState.cameraEnabled && pipelineState.cameraStatus !== "error";
+  const pipelineFrameAvailable = pipelineState.pipelineState !== "STARTING";
+  const snapshotCamera = runtime?.snapshot?.camera;
+  const cameraEnabled = pipelineFrameAvailable ? pipelineState.cameraEnabled : Boolean(snapshotCamera?.enabled);
+  const cameraStatus = pipelineFrameAvailable
+    ? pipelineState.cameraStatus
+    : !snapshotCamera ? "disconnected" : !snapshotCamera.enabled ? "stopped" : snapshotCamera.opened ? "connected" : "disconnected";
+  const cameraError = pipelineFrameAvailable ? pipelineState.cameraError : snapshotCamera?.error ?? null;
+  const cameraIndex = pipelineFrameAvailable ? pipelineState.cameraIndex : snapshotCamera?.index ?? 0;
+  const cameraResolution = pipelineFrameAvailable ? pipelineState.cameraResolution : snapshotCamera?.resolution ?? "--";
+  const cvReady = runtime?.cv === "ready";
+  const cameraReady = isDesktop && runtime?.backend === "ready" && cvReady && cameraEnabled && cameraStatus === "connected";
+  const overlayTitle = !isDesktop
+    ? "Python camera preview unavailable"
+    : runtime?.backend === "error" || runtime?.backend === "stopped"
+      ? "Python backend unavailable"
+      : runtime?.backend !== "ready"
+        ? "Waiting for Python backend"
+        : runtime?.cv === "degraded"
+          ? "CV detector unavailable"
+          : cameraStatus === "stopped" || !cameraEnabled
+            ? "Capture paused"
+            : cameraStatus === "error" || cameraStatus === "disconnected"
+              ? "Camera unavailable"
+              : "Waiting for live frames";
+  const overlayDetail = !isDesktop
+    ? "Browser preview mode does not connect a camera to the Python CV pipeline."
+    : runtime?.cv === "degraded"
+      ? runtime.message
+      : cameraError || (cameraReady ? "Waiting for the next real frame from Python." : runtime?.message || "The preview appears only after Python sends a real camera frame.");
+
+  useEffect(() => {
+    if (cameraReady) return;
+    setHasFrame(false);
+    if (imgRef.current) imgRef.current.removeAttribute("src");
+  }, [cameraReady]);
 
   return (
     <div className="relative flex h-full flex-col">
@@ -121,8 +156,8 @@ export function CameraPanel() {
         </div>
         <div className="flex items-center gap-3">
           <div className="hidden items-center gap-4 2xl:flex">
-            <StatusDot status={pipelineState.cameraStatus === "connected" ? "ok" : "warn"} label={`Pipeline: ${pipelineState.pipelineState}`} />
-            <StatusDot status={detected ? "ok" : "warn"} label={detected ? "Tracking" : "Searching"} />
+            <StatusDot status={cameraReady ? "ok" : "warn"} label={cameraReady ? `Camera ${cameraIndex}` : overlayTitle} />
+            <StatusDot status={cameraReady && detected ? "ok" : "warn"} label={cameraReady ? (detected ? "Tracking" : "No hand") : "CV idle"} />
           </div>
         </div>
       </div>
@@ -142,30 +177,16 @@ export function CameraPanel() {
         <canvas ref={canvasRef} className="absolute inset-0 h-full w-full pointer-events-none z-10" />
         <Corner />
 
-        {/* Camera stopped by the operator, or the pipeline reported a camera failure */}
-        {!cameraOn && (
-          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 bg-[#03050a]/92">
-            <Icon.Camera className="h-7 w-7 text-slate-500" />
-            <div className="mono text-sm font-semibold uppercase tracking-[0.3em] text-slate-300">Camera Off</div>
-            <div className="max-w-[320px] px-6 text-center text-xs text-slate-500">
-              {pipelineState.message || "Capture is stopped in the Python pipeline. Manual and voice commands still work."}
-            </div>
-          </div>
-        )}
-
-        {/* Fallback state only when no frame has arrived from Python */}
-        {!hasFrame && cameraOn && (
-          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-4 bg-[#03050a]/90">
+        {/* The overlay never invents a camera frame: it distinguishes boot, pause and device failure. */}
+        {(!cameraReady || !hasFrame) && (
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-4 bg-[#03050a]/92 px-6 text-center">
             <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
-              <Icon.Camera className="h-7 w-7 text-cyan-400 animate-pulse" />
+              <Icon.Camera className={`h-7 w-7 ${cameraReady ? "animate-pulse text-cyan-400" : "text-slate-500"}`} />
             </div>
-            <div className="relative text-center">
-              <div className="mono text-sm font-semibold uppercase tracking-[0.3em] text-slate-300">
-                Waiting for Python Stream
-              </div>
-              <div className="mt-1 text-xs text-slate-500">
-                Start backend via start_neurogrip.bat or .ps1 · Port 8765
-              </div>
+            <div className="relative">
+              <div className="mono text-sm font-semibold uppercase tracking-[0.22em] text-slate-300">{overlayTitle}</div>
+              <div className="mx-auto mt-2 max-w-[360px] text-xs leading-relaxed text-slate-500">{overlayDetail}</div>
+              {cameraReady && !hasFrame && <div className="mono mt-3 text-[9px] uppercase tracking-wider text-cyan-300/70">Awaiting Python JPEG preview</div>}
             </div>
           </div>
         )}
@@ -175,10 +196,10 @@ export function CameraPanel() {
           <div className="flex items-center gap-2 rounded-md bg-black/50 px-2 py-1 backdrop-blur">
             <span className={`h-1.5 w-1.5 rounded-full ${detected ? "bg-emerald-500 animate-pulse" : "bg-rose-500"}`} />
             <span className="mono text-[10px] uppercase tracking-widest text-slate-200">
-              {detected ? "TRACKING" : "SEARCHING"} · {pipelineState.cameraResolution}
+              {cameraReady ? (detected ? "TRACKING" : "NO HAND") : overlayTitle.toUpperCase()} · {cameraResolution}
             </span>
           </div>
-          <span className="mono text-[10px] text-slate-500">Python OpenCV · {pipelineState.modelUsed}</span>
+          <span className="mono text-[10px] text-slate-500">{isDesktop ? `Python OpenCV · ${pipelineState.modelUsed}` : "Browser preview · no Python feed"}</span>
         </div>
 
         {/* HUD top-right metrics */}
@@ -224,10 +245,10 @@ export function CameraPanel() {
       </div>
 
       {/* Real pipeline notice: camera unavailable / invalid / permission errors */}
-      {pipelineState.cameraError && (
+      {cameraError && (
         <div className="border-t border-rose-400/20 bg-rose-500/[0.07] px-5 py-2">
           <span className="mono text-[10px] uppercase tracking-wider text-rose-300">Camera</span>
-          <span className="ml-2 text-[11px] text-rose-200">{pipelineState.cameraError}</span>
+          <span className="ml-2 text-[11px] text-rose-200">{cameraError}</span>
         </div>
       )}
 
